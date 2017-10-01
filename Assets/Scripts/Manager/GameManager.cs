@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager>
     {
         TableManager.i.DataTableLoad();
 
-        //ChangeScene(SCENE_NAME.LOGO_SCENE, IntroSceneExitWaiting, LogoScenePrepareWaiting);
+        ChangeScene(SCENE_NAME.LOGO_SCENE, IntroSceneExitWaiting, LogoScenePrepareWaiting);
     }
 
     //******************** Main_UI **********************//
