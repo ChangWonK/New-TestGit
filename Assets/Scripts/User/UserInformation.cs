@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-public static class UserInformation
+public class UserInformation: Singleton<UserInformation>
 {
-    public static List<int> _TowerList = new List<int>();
-    public static List<int> _ItemList = new List<int>();
-
+    public Inventory Inventory = new Inventory();
+    public Character Character = new Character();
 
 }

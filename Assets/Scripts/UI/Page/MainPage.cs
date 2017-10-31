@@ -1,81 +1,97 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using uTools;
 
 
-
-
 public class MainPage : UIPopupBase
 {
-    private Text _title;
-    private Text _subTitle;
+    public ShowUserInformation ShowUserInfo;
     private TweenPosition[] _tweens;
-
     private float _stopDefaultPosX = 125;
-
-    
 
     void Awake()
     {
-        //_title = GetText("Text_Title"); ;
-        //_subTitle = GetText("Text_SubTitle"); ;
-
-        //_title.text = "Real";
-        //_subTitle.text = "SubReal";
-
-        //var temp = transform.Find("Dummy2");
-
-        ////var temppp = GetText(temp, "Text_four");
-        //var temppp = GetText("Dummy2", "Text_four");
-
-        //Debug.Log(temppp);        
-
-        _tweens = GetComponentsInChildren<TweenPosition>(true);
+        _tweens = GetComponentsInChildren<TweenPosition>();
+        ShowUserInfo = GetComponentInChildren<ShowUserInformation>();
     }
 
     void Start()
     {
-        Transform buttons = transform.Find("Buttons");
+        RegistAllButtonOnClickEvent();
+        //Transform buttons = transform.Find("Buttons");
 
-        GetButton(buttons, "Btn_LoadScene").onClick.AddListener(() => GameManager.i.ChangeScene
-            (SCENE_NAME.STAGE_SCENE, GameManager.i.MainSceneExitWaiting, GameManager.i.StageScenePrepareWaiting));
+        //GetButton(buttons, "Btn_LoadScene").onClick.AddListener(() => GameManager.i.ChangeScene
+        //    (SCENE_NAME.STAGE_SCENE, GameManager.i.MainSceneExitWaiting, GameManager.i.StageScenePrepareWaiting));
 
-        GetButton(buttons, "Btn_HaveTower").onClick.AddListener(() => UIManager.i.CreatePopup<HaveTower>(POPUP_TYPE.STACK));
-        // GetButton(buttons, "Btn_TowerShop").onClick.AddListener(() => UIManager.i.CreatePopup<TowerShopSecond>(POPUP_TYPE.STACK));
+        //GetButton(buttons, "Btn_UserEquipment").onClick.AddListener(() => UIManager.i.CreatePopup<UserEquipment>(POPUP_TYPE.STACK));
+        //GetButton(buttons, "Btn_ItemShop").onClick.AddListener(() => UIManager.i.CreatePopup<ItemShop>(POPUP_TYPE.STACK));
+        //GetButton(buttons, "Btn_TowerInformationList").onClick.AddListener(() => UIManager.i.CreatePopup<TowerInformationList>(POPUP_TYPE.STACK));
 
-        //for Test
         ButtonTweenPlay(0);
     }
 
 
     public void ButtonTweenPlay(int index)
     {
-
         if (index >= _tweens.Length)
         {
-            Debug.Log("트윈 애니메이션 끝");
+            for (int i = 0; i < index; i++)
+            {
+                _tweens[i].GetComponent<Button>().interactable = true;
+
+            }
             return;
         }
-        
-        _tweens[index].to = new Vector3(_stopDefaultPosX , _tweens[index].transform.position.y , 0);
+
+        _tweens[index].to = new Vector3(_stopDefaultPosX, _tweens[index].transform.localPosition.y, 0);
         _tweens[index].style = Tweener.Style.Once;
         _tweens[index].method = EaseType.easeOutBounce;
         _tweens[index].delay = 0;
-        _tweens[index].duration = 1.0f;        
+        _tweens[index].duration = 0.5f;
 
-        UnityEvent finishedEvent = new UnityEvent();        
 
-        finishedEvent.AddListener( () => ButtonTweenPlay(index));
+        UnityEvent finishedEvent = new UnityEvent();
+
+        finishedEvent.AddListener(() => ButtonTweenPlay(index));
 
         _tweens[index].onFinished = finishedEvent;
 
         _tweens[index].PlayForward();
 
         index++;
+
+    }
+
+    private void LoadScene()
+    {
+        GameManager.i.ChangeScene
+            (SCENE_NAME.STAGE_SCENE, GameManager.i.MainSceneExitWaiting, GameManager.i.StageScenePrepareWaiting);
+    }
+
+    private void CreateUIPopup<T>() where T : UIPopupBase
+    {
+        UIManager.i.CreatePopup<T>(POPUP_TYPE.STACK);
+    }
+
+    protected override void OnButtonClick(string name)
+    {
+        if (name == "Btn_LoadScene")
+        {
+            LoadScene();
+        }
+        if (name == "Btn_ItemShop")
+        {
+            CreateUIPopup<StackItemShop>();
+        }
+        if (name == "Btn_UserEquipment")
+        {
+            CreateUIPopup<StackUserEquipment>();
+        }
+        if (name == "Btn_TowerInformationList")
+        {
+            CreateUIPopup<StackTowerList>();
+        }
 
     }
 

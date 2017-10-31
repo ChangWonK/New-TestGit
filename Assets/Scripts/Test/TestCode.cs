@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestCode : MonoBehaviour
 {
 
+    public List<GameObject> _outPool = new List<GameObject>();
 
 	void Start ()
     {
@@ -16,26 +17,29 @@ public class TestCode : MonoBehaviour
     {
 
 
-        if(GUI.Button(new Rect(0,0,100,100), "Save Data"))
+        if(GUI.Button(new Rect(0,0,100,100), "Instansite"))
         {
-            PlayerPrefs.SetInt("TowerSp0" , 0);
-            PlayerPrefs.SetInt("TowerSp1", 1);
-            PlayerPrefs.SetInt("TowerSp2", 2);
+            var effect = ObjectPool.i.SpwanObject();
 
-            PlayerPrefs.SetInt("Armor0", 0);
-            PlayerPrefs.SetInt("Armor1", 1);
-            PlayerPrefs.SetInt("Armor2", 2);
+            if(effect)
+            {
+                effect.transform.position = Vector3.zero;
+                _outPool.Add(effect);
+            }
         }
 
-        if (GUI.Button(new Rect(0, 200, 100, 100), "Load Data"))
-        {
-            Debug.LogFormat("TowerSp0 : {0}", PlayerPrefs.GetInt("TowerSp0"));
-            Debug.LogFormat("TowerSp1 : {0}", PlayerPrefs.GetInt("TowerSp1"));
-            Debug.LogFormat("TowerSp2 : {0}", PlayerPrefs.GetInt("TowerSp2"));
 
-            Debug.LogFormat("Armor0 : {0}", PlayerPrefs.GetInt("Armor0"));
-            Debug.LogFormat("Armor1 : {0}", PlayerPrefs.GetInt("Armor1"));
-            Debug.LogFormat("Armor2 : {0}", PlayerPrefs.GetInt("Armor2"));            
+        if (GUI.Button(new Rect(0, 200, 100, 100), "SpwaPool"))
+        {
+            GameObject obj = null;
+
+            if (_outPool.Count > 0)
+            {
+                obj = _outPool[0];
+                _outPool.RemoveAt(0);
+            }
+
+            ObjectPool.i.Recycle(obj);
         }
 
     }

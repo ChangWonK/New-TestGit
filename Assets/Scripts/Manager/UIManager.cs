@@ -49,13 +49,23 @@ public class UIManager : MonoBehaviour
     private const string SLASH = "/";
 
     private StringBuilder _textbulider = new StringBuilder(256);
-    private List<UIPopupBase> uiObject_List = new List<UIPopupBase>();
+    private List<UIPopupBase> _popupList = new List<UIPopupBase>();
+    private List<UIPopupBase> _stackList = new List<UIPopupBase>();
+
+    private UIPopupBase _pagePop = null;
 
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
         FindSpecificTransform();
+    }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            RemoveTopUIObject();
+        }
     }
 
     private void FindSpecificTransform()
@@ -80,77 +90,178 @@ public class UIManager : MonoBehaviour
 
         GameObject popup = Instantiate(pop);
 
-        switch (poptype)
-        {
-            case POPUP_TYPE.PAGE:
-                popup.transform.SetParent(_pageTrans, false);
-                break;
-            case POPUP_TYPE.STACK:
-                popup.transform.SetParent(_stackTrans, false);
-                break;
-            case POPUP_TYPE.POPUP:
-                popup.transform.SetParent(_popupTrans, false);
-                break;
-            case POPUP_TYPE.FRONT:
-                popup.transform.SetParent(_frontTrans, false);
-                break;
-        }
-
         var returnValue = popup.GetComponent<T>();
 
         returnValue.TYPE = poptype;
 
-        uiObject_List.Add(returnValue);
+        switch (poptype)
+        {
+            case POPUP_TYPE.PAGE:
+                _pagePop = returnValue;
+                popup.transform.SetParent(_pageTrans, false);
+                break;
+            case POPUP_TYPE.STACK:
+                _stackList.Add(returnValue);
+                popup.transform.SetParent(_stackTrans, false);
+                break;
+            case POPUP_TYPE.POPUP:
+                popup.transform.SetParent(_popupTrans, false);
+                _popupList.Add(returnValue);
+                break;
+            case POPUP_TYPE.FRONT:
+                popup.transform.SetParent(_frontTrans, false);
+                _popupList.Add(returnValue);
+                break;
+        }
 
         return returnValue;
     }
 
-    public T FindUIObject<T>() where T : UIPopupBase
+    public T GetPageUIObject<T>() where T : UIPopupBase
     {
-        T obj = uiObject_List.Find((c) => c is T) as T;
+        return _pagePop.GetComponent<T>();
+    }
+
+    public T GetStackUIObject<T>() where T : UIPopupBase
+    {
+        T obj = _stackList.Find((c) => c is T) as T;
 
         if (obj == null)
         {
-            print("Object is Null");
             return null;
         }
 
         return obj.GetComponent<T>();
-
     }
 
-    public void RemoveUIObject<T>() where T : UIPopupBase
+    public T GetPopupUIObject<T>() where T : UIPopupBase
     {
-        T obj = uiObject_List.Find((c) => c is T) as T;
+        T obj = _popupList.Find((c) => c is T) as T;
 
         if (obj == null)
         {
-            print("Object is Null");
-            return;
+            return null;
         }
 
-        uiObject_List.Remove(obj);
+        return obj.GetComponent<T>();
+    }
+
+    public void RemoveStackUIObject<T>() where T : UIPopupBase
+    {
+        T obj = _stackList.Find((c) => c is T) as T;
+
+        if (obj == null)
+            return;
+
+        _stackList.Remove(obj);
         Destroy(obj.gameObject);
     }
 
-    public void RemoveAllObject()
+    public void RemovePopupUIObject<T>() where T : UIPopupBase
     {
-        uiObject_List.FindAll((c) =>
-        {
-            if (c is FadeInOut)
-            {
-                return false;
-            }
-            else
-            {
-                if (c == null)
-                    return true;
+        T obj = _popupList.Find((c) => c is T) as T;
 
-                Destroy(c.gameObject);
-                uiObject_List.Remove(c);
-                return true;
-            }
-        });
+        if (obj == null)
+            return;
+
+        _popupList.Remove(obj);
+        Destroy(obj.gameObject);
     }
+
+    public void RemoveTopPopupUIObject()
+    {
+        if (_popupList.Count > 0)
+        {
+            var lastPop = _popupList.FindLast((c) => c);
+            _popupList.Remove(lastPop);
+            lastPop.RemovedUIObject();
+
+
+            var pop = _popupList.FindLast((c) => c);
+            if (pop != null) pop.ResetUIUpdata();
+        }
+    }
+
+    public void RemoveTopStackUIObject()
+    {
+        if (_stackList.Count > 0)
+        {
+            var lastPop = _stackList.FindLast((c) => c);
+            _stackList.Remove(lastPop);
+            lastPop.RemovedUIObject();
+
+            var pop = _stackList.FindLast((c) => c);
+            if(pop !=null) pop.ResetUIUpdata();
+        }
+    }
+    public void RemoveTopUIObject()
+    {
+       if(_popupList.Count > 0)
+        {
+            RemoveTopPopupUIObject();
+            return;
+        }
+
+        RemoveTopStackUIObject();
+    }
+
+
+    //public void RemoveLastUIObject()
+    //{
+    //    int findNumCompare = 0;
+
+    //    bool isActive = _popupList.Find((c) => c is FadeInOut);
+    //    if (isActive == true) findNumCompare = 1;
+
+    //    int FindNum = _popupList.FindLastIndex((c) => c);
+
+
+    //    if (FindNum > findNumCompare)
+    //    {
+    //        Destroy(_popupList[FindNum].gameObject);
+    //        _popupList.RemoveAt(FindNum);
+    //    }
+    //}
+
+    //public void RemoveTopUIObject(UnityAction action = null)
+    //{
+    //    List<UIPopupBase> stackList = new List<UIPopupBase>();
+
+    //    var page = GetPopupUIObject<MainPage>();
+
+    //    int topPopup = _popupList.Count  - 1;
+
+    //    if(topPopup >= 0)
+    //    {
+    //        Destroy(_popupList[topPopup].gameObject);
+
+    //        _popupList.RemoveAt(topPopup);
+
+    //        if(_popupList.Count > 0 && action != null)
+    //        {
+    //            _popupList[_popupList.Count - 1].ResetUIUpdata();
+    //        }
+    //    }
+    //}
+   
+    //public void RemoveAllObject()
+    //{
+    //    _uiPopupList.FindAll((c) =>
+    //    {
+    //        if (c is FadeInOut)
+    //        {
+    //            return false;
+    //        }
+    //        else
+    //        {
+    //            if (c == null)
+    //                return true;
+
+    //            Destroy(c.gameObject);
+    //            _uiPopupList.Remove(c);
+    //            return true;
+    //        }
+    //    });
+    //}
 
 }

@@ -12,6 +12,8 @@ public class TowerShop : UIPopupBase
     private Button _buyBtn;
     private Button _sellBtn;
 
+    private TowerData _tableTower;
+
 
     void Awake()
     {
@@ -20,103 +22,107 @@ public class TowerShop : UIPopupBase
         _upgardeBtn = GetButton(shopbtn, "Btn_Upgrade");
         _buyBtn = GetButton(shopbtn, "Btn_Buy");
         _sellBtn = GetButton(shopbtn, "Btn_Sell");
+
+        _tableTower = TableManager.i.GetTable<TowerData>(_ScrollIndex);
     }
 
-    void Start()
-    {
-        UpdateShopButton();
+    //void Start()
+    //{
+    //    UpdateShopButton();
 
-        _buyBtn.onClick.AddListener(BuyButton);
-        _upgardeBtn.onClick.AddListener(UpgradeButton);
-        _sellBtn.onClick.AddListener(SellButton);
+    //    _buyBtn.onClick.AddListener(BuyButton);
+    //    _upgardeBtn.onClick.AddListener(UpgradeButton);
+    //    _sellBtn.onClick.AddListener(SellButton);
 
 
-        Transform skillbtn = transform.Find("SkillButtons");
+    //    Transform skillbtn = transform.Find("SkillButtons");
 
-        GetButton(skillbtn, "Btn_FirstSkill").onClick.AddListener(() => SkillButton(1));
-        GetButton(skillbtn, "Btn_SecondSkill").onClick.AddListener(() => SkillButton(2));
-        GetButton(skillbtn, "Btn_ThirdSkill").onClick.AddListener(() => SkillButton(3));
+    //    GetButton(skillbtn, "Btn_FirstSkill").onClick.AddListener(() => SkillButton(1));
+    //    GetButton(skillbtn, "Btn_SecondSkill").onClick.AddListener(() => SkillButton(2));
+    //    GetButton(skillbtn, "Btn_ThirdSkill").onClick.AddListener(() => SkillButton(3));
 
-    }
+    //}
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            UIManager.i.RemoveUIObject<TowerShop>();
-        }
-    }
+    //private void UpdateShopButton()
+    //{
+    //    for (int i = 0; i < UserInformation.TowerList.Count; i++)
+    //    {
+    //        if (UserInformation.TowerList[i] == _ScrollIndex)
+    //        {
+    //            _buyBtn.interactable = false;
+    //            return;
+    //        }
+    //    }
 
-    private void UpdateShopButton()
-    {
-        for (int i = 0; i < UserInformation._TowerList.Count; i++)
-        {
-            if (UserInformation._TowerList[i] == _ScrollIndex)
-            {
-                _buyBtn.interactable = false;
-                return;
-            }
-        }
+    //    _sellBtn.interactable = false;
+    //    _upgardeBtn.interactable = false;
+    //}
 
-        _sellBtn.interactable = false;
-        _upgardeBtn.interactable = false;
-    }
+    //private void UpgradeButton()
+    //{
+    //    //var table = TableManager.i.GetTable<TowerData>(_ScrollIndex);
+    //    //table.Level += 1;
 
-    private void UpgradeButton()
-    {
-        var table = TableManager.i.GetTable<TowerData>(_ScrollIndex);
-        table.Level += 1;
+    //    UIManager.i.GetUIObject<TowerInformationList>().UpdateData(_ScrollIndex);
+    //}
 
-        UIManager.i.FindUIObject<HaveTower>().UpdateData(_ScrollIndex);
-    }
+    //private void BuyButton()
+    //{
+    //    if (_tableTower.Cost > UserInformation.Gold)
+    //        return;
 
-    private void BuyButton()
-    {
-        UserInformation._TowerList.Add(_ScrollIndex);
+    //    UserInformation.Gold -= _tableTower.Cost;
 
-        _buyBtn.interactable = false;
-        _upgardeBtn.interactable = true;
-        _sellBtn.interactable = true;
-    }
+    //    UIManager.i.GetUIObject<MainPage>().ShowUserInfo.UpdateData();
 
-    private void SellButton()
-    {
-        UserInformation._TowerList.Remove(_ScrollIndex);
+    //    UserInformation.TowerList.Add(_ScrollIndex);
 
-        _buyBtn.interactable = true;
-        _upgardeBtn.interactable = false;
-        _sellBtn.interactable = false;
-    }
+    //    _buyBtn.interactable = false;
+    //    _upgardeBtn.interactable = true;
+    //    _sellBtn.interactable = true;
+    //}
 
-    private void SkillButton(int numSkill)
-    {
-        int skillIndex = 0;
-        switch (numSkill)
-        {
-            case 1:
-                {
-                    skillIndex = TableManager.i.GetTable<TowerData>(_ScrollIndex).FirstSkillIndex;
-                }
-                break;
-            case 2:
-                {
-                    skillIndex = TableManager.i.GetTable<TowerData>(_ScrollIndex).SecondSkillIndex;
+    //private void SellButton()
+    //{
+    //    float temp = _tableTower.Cost * 0.5f;
+    //    UserInformation.Gold += temp;
 
-                }
-                break;
-            case 3:
-                {
-                    skillIndex = TableManager.i.GetTable<TowerData>(_ScrollIndex).ThirdSkillIndex;
-                }
-                break;
+    //    UserInformation.TowerList.Remove(_ScrollIndex);
 
-            default:
-                break;
-        }
+    //    _buyBtn.interactable = true;
+    //    _upgardeBtn.interactable = false;
+    //    _sellBtn.interactable = false;
+    //}
 
-        var skill = TableManager.i.GetTable<SkillData>(skillIndex);
-        GetText("Txt_Skill").text = skill.Name;
+    //private void SkillButton(int numSkill)
+    //{
+    //    int skillIndex = 0;
+    //    switch (numSkill)
+    //    {
+    //        case 1:
+    //            {
+    //                skillIndex = TableManager.i.GetTable<TowerData>(_ScrollIndex).FirstSkillIndex;
+    //            }
+    //            break;
+    //        case 2:
+    //            {
+    //                skillIndex = TableManager.i.GetTable<TowerData>(_ScrollIndex).SecondSkillIndex;
 
-    }
+    //            }
+    //            break;
+    //        case 3:
+    //            {
+    //                skillIndex = TableManager.i.GetTable<TowerData>(_ScrollIndex).ThirdSkillIndex;
+    //            }
+    //            break;
+
+    //        default:
+    //            break;
+    //    }
+
+    //    var skill = TableManager.i.GetTable<SkillData>(skillIndex);
+    //    GetText("Txt_Skill").text = skill.Name;
+
+    //}
 
 }

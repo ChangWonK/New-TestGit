@@ -10,11 +10,14 @@ public class TowerInformation : UIObject
     private Text _species;
     private Text _rank;
     private Text _level;
+    private Text _cost;
+
     private Text _atkPower;
     private Text _atkSpeed;
     private Text _atkRange;
     private Text _moveSpeed;
-
+    private Text _skill;
+   
 
     void Awake()
     {
@@ -23,13 +26,15 @@ public class TowerInformation : UIObject
         _species = GetText("Txt_Species");
         _rank = GetText("Txt_Rank");
         _level = GetText("Txt_Level");
+        _cost = GetText("Txt_Cost");
 
         _atkPower = GetText("Txt_AtkPower");
         _atkSpeed = GetText("Txt_AtkSpeed");
         _atkRange = GetText("Txt_AtkRange");
         _moveSpeed = GetText("Txt_MoveSpeed");
-    }
 
+        _skill = GetText("Txt_Skill");
+    }
 
     public void SetUIData(int index)
     {
@@ -39,9 +44,12 @@ public class TowerInformation : UIObject
         _species.text = "종족 : " + table.Species;
         _rank.text = "계급 : " + table.Rank;
         _level.text = "레벨 : " + table.Level.ToString();
+        _cost.text = "비용 : " + table.Cost.ToString();
+
         _atkPower.text = "공격력 : " + table.AtkPower.ToString();
         _atkSpeed.text = "공격속도 : " + table.AtkSpeed.ToString();
         _atkRange.text = "공격사거리 : " + table.AtkRange.ToString();
         _moveSpeed.text = "이동속도 : " + table.MoveSpeed.ToString();
+        
     }
 }

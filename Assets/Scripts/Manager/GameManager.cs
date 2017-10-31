@@ -4,13 +4,10 @@ using System.Collections;
 
 public class GameManager : Singleton<GameManager>
 {
-
     void Awake()
     {
-
         DontDestroyOnLoad(gameObject);
         var pop = UIManager.i.CreatePopup<FadeInOut>(POPUP_TYPE.FRONT);
-    
     }
 
     void Start()
@@ -20,28 +17,28 @@ public class GameManager : Singleton<GameManager>
         ChangeScene(SCENE_NAME.LOGO_SCENE, IntroSceneExitWaiting, LogoScenePrepareWaiting);
     }
 
-    //******************** Main_UI **********************//
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Escape))
+    //    {
+    //        if (UIManager.i.GetUIObject<ItemManagement>())
+    //        {
+    //            var pop = UIManager.i.GetUIObject<ItemManagement>();
 
+    //            UIManager.i.RemoveTopUIObject(pop.Reset);
+    //            return;
+    //        }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
+    //        UIManager.i.RemoveTopUIObject();
+    //    }
 
-            TowerData tabledata = TableManager.i.GetTable<TowerData>(2);
-
-            Debug.Log(tabledata.Name);
-        }
-    }
-
-
-
+    //}
 
     //******************** Scene **********************//
 
     public void ChangeScene(SCENE_NAME sceneName, UnityAction exit, UnityAction preFunc)
     {
-        var pop = UIManager.i.FindUIObject<FadeInOut>();
+        var pop = UIManager.i.GetPopupUIObject<FadeInOut>();
 
         if (pop == null)
             pop = UIManager.i.CreatePopup<FadeInOut>(POPUP_TYPE.FRONT);
@@ -57,45 +54,42 @@ public class GameManager : Singleton<GameManager>
     public void LogoScenePrepareWaiting()
     {
         UIManager.i.CreatePopup<LogoPopup>(POPUP_TYPE.POPUP);
-        var pop = UIManager.i.FindUIObject<FadeInOut>();
+        var pop = UIManager.i.GetPopupUIObject<FadeInOut>();
 
         SceneManager.i.Done();
 
-        pop.FadeIn(() => UIManager.i.RemoveUIObject<FadeInOut>());
+        pop.FadeIn(() => UIManager.i.RemovePopupUIObject<FadeInOut>());
         StartCoroutine(DelayTimeFunc(1.8f, () => { ChangeScene(SCENE_NAME.GAME_SCENE, LogoSceneExitWaiting, MainScenePrepareWaiting); }));
     }
 
     public void LogoSceneExitWaiting()
     {
-        UIManager.i.RemoveAllObject();
-
         SceneManager.i.Done();
     }
 
     public void MainScenePrepareWaiting()
     {
-        UIManager.i.CreatePopup<MainPage>(POPUP_TYPE.PAGE);
-        var pop = UIManager.i.FindUIObject<FadeInOut>();
+        var mainPop = UIManager.i.CreatePopup<MainPage>(POPUP_TYPE.PAGE);
+        var pop = UIManager.i.GetPopupUIObject<FadeInOut>();
 
         SceneManager.i.Done();
+        pop.AddAction += () => mainPop.ButtonTweenPlay(0);
 
-        pop.FadeIn(() => UIManager.i.RemoveUIObject<FadeInOut>());
+        pop.FadeIn(() => UIManager.i.RemovePopupUIObject<FadeInOut>());
     }
 
     public void MainSceneExitWaiting()
     {
-        UIManager.i.RemoveAllObject();
-
         SceneManager.i.Done();
     }
 
     public void StageScenePrepareWaiting()
     {
-        var pop = UIManager.i.FindUIObject<FadeInOut>();
+        var pop = UIManager.i.GetPopupUIObject<FadeInOut>();
 
         SceneManager.i.Done();
 
-        pop.FadeIn(() => UIManager.i.RemoveUIObject<FadeInOut>());
+        pop.FadeIn(() => UIManager.i.RemovePopupUIObject<FadeInOut>());
     }
 
     private IEnumerator DelayTimeFunc(float time, UnityAction func)

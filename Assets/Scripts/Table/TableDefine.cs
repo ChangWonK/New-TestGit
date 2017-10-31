@@ -7,7 +7,7 @@ using System.Xml;
 // 엑셀 시트이름과 같이 할것 
 public class TowerData : Table<TowerData> , ITableRow
 {
-    public const string PrefabPath = "Prefabs/UI/ScrollItem/TowerContent";
+    public const string PrefabPath = Utility.TowerContentPath;
 
     public int LocalIndex;
     public string Name;
@@ -39,6 +39,7 @@ public class TowerData : Table<TowerData> , ITableRow
         Name = node.GetString("Name");
         Species = node.GetString("Species");
         Rank = node.GetString("Rank");
+        Level = node.GetInt("Level");
         AtkPower = node.GetFloat("AtkPower");
         AtkSpeed = node.GetFloat("AtkSpeed");
         AtkRange = node.GetFloat("AtkRange");
@@ -52,17 +53,28 @@ public class TowerData : Table<TowerData> , ITableRow
 
 public class ItemData : Table<ItemData>, ITableRow
 {
-    public const string PrefabPath = "Prefabs/UI/ScrollItem/ItemContent";
+    public const string PrefabPath = Utility.ItemContentPath;
 
     public int LocalIndex;
     public string Name;
-    public string Rank;
     public string Kind;
-    public float AtkPower;
-    public float AtkSpeed;
-    public float AtkRange;
-    public float MoveSpeed;
+    public string Rank;
+    public int intRank;
+    public int Level;
     public int Cost;
+
+    public float HumanAtkPower;
+    public float HumanAtkSpeed;
+    public float HumanAtkRange;
+    public float HumanMoveSpeed;
+    public float MachineAtkPower;
+    public float MachineAtkSpeed;
+    public float MachineAtkRange;
+    public float MachineMoveSpeed;
+    public float MagicAtkPower;
+    public float MagicAtkSpeed;
+    public float MagicAtkRange;
+    public float MagicMoveSpeed;
 
     public int ID
     {
@@ -76,13 +88,28 @@ public class ItemData : Table<ItemData>, ITableRow
     {
         LocalIndex = node.GetInt("LocalIndex");
         Name = node.GetString("Name");
-        Rank = node.GetString("Rank");
         Kind = node.GetString("Kind");
-        AtkPower = node.GetInt("AtkPower");
-        AtkSpeed = node.GetFloat("AtkSpeed");
-        AtkRange = node.GetFloat("AtkRange");
-        MoveSpeed = node.GetFloat("MoveSpeed");
+        Rank = node.GetString("Rank");
+        intRank = node.GetInt("intRank");
+        Level = node.GetInt("Level");
         Cost = node.GetInt("Cost");
+
+
+        HumanAtkPower = node.GetFloat("HumanAtkPower");
+        HumanAtkSpeed = node.GetFloat("HumanAtkSpeed");
+        HumanAtkRange = node.GetFloat("HumanAtkRange");
+        HumanMoveSpeed = node.GetFloat("HumanMoveSpeed");
+
+        MachineAtkPower = node.GetFloat("MachineAtkPower");
+        MachineAtkSpeed = node.GetFloat("MachineAtkSpeed");
+        MachineAtkRange = node.GetFloat("MachineAtkRange");
+        MachineMoveSpeed = node.GetFloat("MachineMoveSpeed");
+
+        MagicAtkPower = node.GetFloat("MagicAtkPower");
+        MagicAtkSpeed = node.GetFloat("MagicAtkSpeed");
+        MagicAtkRange = node.GetFloat("MagicAtkRange");
+        MagicMoveSpeed = node.GetFloat("MagicMoveSpeed");
+
     }
 }
 
@@ -107,4 +134,3 @@ public class SkillData : Table<SkillData>, ITableRow
         Name = node.GetString("Name");
     }
 }
-

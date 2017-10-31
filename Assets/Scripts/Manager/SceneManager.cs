@@ -1,23 +1,19 @@
 ﻿using System.Collections;
-using UnityEngine;
 using UnityEngine.Events;
 
 public enum SCENE_NAME { INTRO_SCENE = 0, LOGO_SCENE, MAIN_SCENE, STAGE_SCENE, GAME_SCENE, NONE = 100 }
 
 public class SceneManager : Singleton<SceneManager>
 {
-
     private UnityAction exit;
     private UnityAction prepare;
 
     public SCENE_NAME CurrentScene;
 
-
     void Awake()
     {
         CurrentScene = SCENE_NAME.NONE;
     }
-
 
     public void ChangeScene(SCENE_NAME nextScene, UnityAction exitFunc, UnityAction preFunc)
     {
@@ -50,7 +46,6 @@ public class SceneManager : Singleton<SceneManager>
 
         yield return StartCoroutine(LoadScene(nextScene));
 
-        Debug.Log("LoadScene");
 
         StartCoroutine(PrepareScene());
     }
@@ -62,7 +57,6 @@ public class SceneManager : Singleton<SceneManager>
 
         while (progress.isDone == false)
         {
-            Debug.Log(progress.isDone);
 
             yield return null;
         }
