@@ -62,8 +62,14 @@ public class StackUpgradePanel : UIPopupBase
 
     private void CreateContent()
     {
-        _scrollView.CreateContent(ContentIndex.ITEM);
+        _scrollView.CreateContent(ContentIndex.ITEM , ContentClickEvent);
     }
+
+    private void ContentClickEvent(long itemUID)
+    {
+        Debug.Log("Item : " + itemUID);
+    }
+
 
     private void SetContentInfo()
     {

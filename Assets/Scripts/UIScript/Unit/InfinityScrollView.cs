@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class InfinityScrollView : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class InfinityScrollView : MonoBehaviour
         _scrollRect = GetComponent<ScrollRect>();
     }
 
-    public void CreateContent(ContentIndex SelectContent)
+    public void CreateContent(ContentIndex SelectContent, UnityAction<long> btnCallback)
     {
         string path = null;
 
@@ -43,7 +44,11 @@ public class InfinityScrollView : MonoBehaviour
 
         for (int i = 0; i < UserSetInstanceScrollObjCount; i++)
         {
-             Instantiate(content, _scrollRect.content);
+             var itemContent = Instantiate(content, _scrollRect.content);
+
+             var cnt = itemContent.GetComponent<ItemContent>();
+
+            cnt.Callback = btnCallback;
         }
 
     }

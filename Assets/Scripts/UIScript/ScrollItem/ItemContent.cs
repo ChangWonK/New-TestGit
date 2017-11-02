@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ItemContent : UnitContent
 {
+    public UnityAction<long> Callback;
+
     void Awake()
     {
         _textRank = GetText("Txt_Rank");
@@ -47,6 +50,10 @@ public class ItemContent : UnitContent
 
     public void ButtonAction()
     {
+        if (Callback != null)
+            Callback.Invoke(_uID);
+
+
         if (UIManager.i.GetStackUIObject<StackItemShop>())
         {
            var pop = UIManager.i.CreatePopup<StackItemManagement>(POPUP_TYPE.STACK);

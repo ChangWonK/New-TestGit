@@ -22,26 +22,6 @@ public class TestCode : MonoBehaviour
         UserInformation.i.Character.Init();
     }
 
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            PoolItemName = "HumanBullet";
-            TestObjectPool();
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            PoolItemName = "MachineBullet";
-
-            TestObjectPool();
-        }
-    }
-
-    void TestObjectPool()
-    {
-        GameObject testObject = ObjectPool.i.PopFromPool(PoolItemName);
-        testObject.SetActive(true);
-    }
 
     void TestTowerBuild<T>(int index) where T : TowerBase, new()
     {

@@ -8,9 +8,40 @@ public class Tower : MonoBehaviour
 
     public TowerBase TowerBase;
 
-    private States _state = States.BUILD;
+    private States _currentState = States.BUILD;
 
     void Update()
+    {
+
+        switch(_currentState)
+        {
+            case States.WATING:
+                {
+
+                    
+                }
+                break;
+            case States.ATTACK:
+                {
+
+                }
+                break;
+            case States.BUILD:
+                {
+
+                }
+                break;
+            case States.MOVE:
+                {
+
+                }
+                break;
+        }
+
+
+    }
+
+    public void UpdateStates()
     {
 
     }
