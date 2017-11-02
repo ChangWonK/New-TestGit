@@ -1,16 +1,28 @@
-﻿
-public class TowerBase : Unit
+﻿using UnityEngine;
+
+public abstract class TowerBase
 {
+    public long UID;
+    public int LocalIndex;
+    public string Name;
+    public string Kind;
+    public string Rank;
+    public int intRank;
+    public int Level;
+    public int Cost;
+
     public float AtkPower;
     public float AtkSpeed;
     public float AtkRange;
     public float MoveSpeed;
 
-    public TowerBase(int index)
+    public void Init(int index)
     {
         var table = TableManager.i.GetTable<TowerData>(index);
 
         UID = (index + 11) / 10;
+
+        Debug.Log(UID);
         LocalIndex = index;
         Name = table.Name;
         Kind = table.Species;
@@ -25,13 +37,10 @@ public class TowerBase : Unit
         MoveSpeed = table.MoveSpeed;
     }
 
-    public TowerBase()
-    {
-    }
+    public abstract void SetAility();
 
-    public virtual void SetAtkPower() { }
-    public virtual void SetAtkSpeed() { }
-    public virtual void SetAtkMoveSpeed() {  }
+    public abstract float Attack();
 
+    //public abstract void AddBuf();
 
 }

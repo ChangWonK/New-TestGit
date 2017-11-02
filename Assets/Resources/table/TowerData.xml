@@ -7,7 +7,7 @@
     <Species>Human</Species>
     <Rank>F</Rank>
     <Level>1</Level>
-    <AtkPower>24</AtkPower>
+    <AtkPower>120</AtkPower>
     <AtkSpeed>0.5</AtkSpeed>
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>

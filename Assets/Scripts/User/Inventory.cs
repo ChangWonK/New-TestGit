@@ -86,9 +86,27 @@ public class Inventory
     {
         _towerList.Add(tower);
     }
+
+    public void RemoveTower(TowerBase tower)
+    {
+        _towerList.Remove(tower);
+    }
+
     public TowerBase FindTower(long uid)
     {
         return _towerList.Find((c) => c.UID == uid);
     }
+
+    public T FindTower<T>(long uid) where T : TowerBase
+    {
+        return _towerList.Find((c) => c.UID == uid) as T;
+    }
+
+    //public T FetchTower<T>(long uid) where T : TowerBase, new()
+    //{
+    //    T tower = _towerList.Find((c) => c.UID == uid) as T;
+
+    //    return new T() ;
+    //}
 
 }

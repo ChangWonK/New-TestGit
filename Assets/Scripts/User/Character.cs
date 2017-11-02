@@ -1,4 +1,5 @@
-﻿
+﻿using UnityEngine;
+
 public class Character
 {
     private float _humanAtkPower;
@@ -14,26 +15,35 @@ public class Character
     private float _magicAtkRange;
     private float _magicMoveSpeed;
 
+    public void Init()
+    {
+        GetItemAbility();
+    }
+
     private void GetItemAbility()
     {
        var enumer =  UserInformation.i.Inventory.GetEnumerMountingItemDic();
 
         while(enumer.MoveNext())
         {
-            _humanAtkPower = enumer.Current.Value.HumanAtkPower;
-            _humanAtkSpeed = enumer.Current.Value.HumanAtkSpeed;
-            _humanAtkRange = enumer.Current.Value.HumanAtkRange;
-            _humanMoveSpeed = enumer.Current.Value.HumanMoveSpeed;
-            _machineAtkPower = enumer.Current.Value.MachineAtkPower;
-            _machineAtkSpeed = enumer.Current.Value.MachineAtkSpeed;
-            _machineAtkRange = enumer.Current.Value.MachineAtkRange;
-            _machineMoveSpeed = enumer.Current.Value.MachineMoveSpeed;
-            _magicAtkPower = enumer.Current.Value.MagicAtkPower;
-            _magicAtkSpeed = enumer.Current.Value.MagicAtkSpeed;
-            _magicAtkRange = enumer.Current.Value.MagicAtkRange;
-            _magicMoveSpeed = enumer.Current.Value.MagicMoveSpeed;
+            _humanAtkPower += enumer.Current.Value.HumanAtkPower;
+            _humanAtkSpeed += enumer.Current.Value.HumanAtkSpeed;
+            _humanAtkRange += enumer.Current.Value.HumanAtkRange;
+            _humanMoveSpeed += enumer.Current.Value.HumanMoveSpeed;
+
+            _machineAtkPower += enumer.Current.Value.MachineAtkPower;
+            _machineAtkSpeed += enumer.Current.Value.MachineAtkSpeed;
+            _machineAtkRange += enumer.Current.Value.MachineAtkRange;
+            _machineMoveSpeed += enumer.Current.Value.MachineMoveSpeed;
+
+            _magicAtkPower += enumer.Current.Value.MagicAtkPower;
+            _magicAtkSpeed += enumer.Current.Value.MagicAtkSpeed;
+            _magicAtkRange += enumer.Current.Value.MagicAtkRange;
+            _magicMoveSpeed += enumer.Current.Value.MagicMoveSpeed;
         }
     }
+
+
 
     public float GetHumanAtkPower() { return _humanAtkPower; }
     public float GetHumanAtkSpeed() { return _humanAtkSpeed; }

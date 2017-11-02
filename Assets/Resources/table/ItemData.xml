@@ -8,7 +8,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>1</Level>
-    <HumanAtkPower>0.01</HumanAtkPower>
+    <HumanAtkPower>0.15</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -30,7 +30,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>2</Level>
-    <HumanAtkPower>0.03</HumanAtkPower>
+    <HumanAtkPower>1.03</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -52,7 +52,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>3</Level>
-    <HumanAtkPower>0.05</HumanAtkPower>
+    <HumanAtkPower>1.05</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -74,7 +74,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>4</Level>
-    <HumanAtkPower>0.07</HumanAtkPower>
+    <HumanAtkPower>1.07</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -96,7 +96,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>5</Level>
-    <HumanAtkPower>0.09</HumanAtkPower>
+    <HumanAtkPower>1.09</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -118,7 +118,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>6</Level>
-    <HumanAtkPower>0.11</HumanAtkPower>
+    <HumanAtkPower>1.11</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -140,7 +140,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>7</Level>
-    <HumanAtkPower>0.13</HumanAtkPower>
+    <HumanAtkPower>1.13</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -162,7 +162,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>8</Level>
-    <HumanAtkPower>0.15</HumanAtkPower>
+    <HumanAtkPower>1.15</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -184,7 +184,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>9</Level>
-    <HumanAtkPower>0.17</HumanAtkPower>
+    <HumanAtkPower>1.17</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -206,7 +206,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>10</Level>
-    <HumanAtkPower>0.2</HumanAtkPower>
+    <HumanAtkPower>1.19</HumanAtkPower>
     <HumanAtkSpeed>0.05</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -228,7 +228,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>1</Level>
-    <HumanAtkPower>0.03</HumanAtkPower>
+    <HumanAtkPower>1.13</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -250,7 +250,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>2</Level>
-    <HumanAtkPower>0.05</HumanAtkPower>
+    <HumanAtkPower>1.15</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -272,7 +272,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>3</Level>
-    <HumanAtkPower>0.07</HumanAtkPower>
+    <HumanAtkPower>1.17</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -294,7 +294,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>4</Level>
-    <HumanAtkPower>0.09</HumanAtkPower>
+    <HumanAtkPower>1.19</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -316,7 +316,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>5</Level>
-    <HumanAtkPower>0.11</HumanAtkPower>
+    <HumanAtkPower>1.21</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -338,7 +338,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>6</Level>
-    <HumanAtkPower>0.13</HumanAtkPower>
+    <HumanAtkPower>1.23</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -360,7 +360,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>7</Level>
-    <HumanAtkPower>0.15</HumanAtkPower>
+    <HumanAtkPower>1.25</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -382,7 +382,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>8</Level>
-    <HumanAtkPower>0.17</HumanAtkPower>
+    <HumanAtkPower>1.27</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -404,7 +404,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>9</Level>
-    <HumanAtkPower>0.19</HumanAtkPower>
+    <HumanAtkPower>1.29</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -426,7 +426,7 @@
     <Rank>D</Rank>
     <intRank>1</intRank>
     <Level>10</Level>
-    <HumanAtkPower>0.24</HumanAtkPower>
+    <HumanAtkPower>1.31</HumanAtkPower>
     <HumanAtkSpeed>0.1</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
@@ -668,7 +668,7 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>1</Level>
-    <HumanAtkPower>0.01</HumanAtkPower>
+    <HumanAtkPower>0.2</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>

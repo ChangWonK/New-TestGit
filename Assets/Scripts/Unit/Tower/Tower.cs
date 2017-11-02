@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    TowerBase tb = new TowerBase();
-	// Use this for initialization
-	void Start () {
+    private enum States { WATING = 0, ATTACK, BUILD, MOVE }
 
-        tb.SetAtkPower();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public TowerBase TowerBase;
+
+    private States _state = States.BUILD;
+
+    void Update()
+    {
+
+    }
+
+    public void Init()
+    {
+        TowerBase.SetAility();
+    }
+
+    public void Attack()
+    {
+        TowerBase.Attack();
+    }
+
+
+
 }

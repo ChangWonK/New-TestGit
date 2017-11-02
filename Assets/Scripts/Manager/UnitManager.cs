@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class UnitManager : Singleton<UnitManager>
 {
+    private List<TowerBase> _towerList = new List<TowerBase>();
+
     private bool _isMountingRing = false;
     private string _kindItem = "";
 
@@ -96,20 +99,39 @@ public class UnitManager : Singleton<UnitManager>
         }
     }
 
-    public void TowerBuy(int index)
+    public void UITowerBuy<T>(int index) where T : TowerBase, new()
     {
-        TowerBase newTower = new TowerBase(index);
+        T newTower = new T();
+
+        newTower.Init(index);
 
         UserInformation.i.Inventory.AddTower(newTower);
     }
 
-    public int TowerUpgrade(long uid)
+    public int UITowerUpgrade(long uid)
     {
         var tower = UserInformation.i.Inventory.FindTower(uid);
-        tower.LocalIndex++;
-        tower.Level++;
+
+        int nextIndex = tower.LocalIndex++;
+
+        tower.Init(nextIndex);
 
         return tower.LocalIndex;
+    }
+
+    public Tower TowerBuild<T>(Tower tower, int index) where T : TowerBase, new()
+    {
+        tower.TowerBase = new T();
+        tower.TowerBase.Init(index);
+        tower.Init();
+
+        _towerList.Add(tower.TowerBase);
+        return tower;
+    }
+
+    public void RemoveTower(TowerBase tower)
+    {
+        _towerList.Remove(tower);
     }
 
 
