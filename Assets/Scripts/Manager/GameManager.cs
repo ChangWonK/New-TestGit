@@ -64,6 +64,7 @@ public class GameManager : Singleton<GameManager>
 
     public void LogoSceneExitWaiting()
     {
+        UIManager.i.RemovePopupUIObject<LogoPopup>();
         SceneManager.i.Done();
     }
 

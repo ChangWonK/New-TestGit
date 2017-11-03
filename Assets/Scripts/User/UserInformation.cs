@@ -5,6 +5,7 @@ public class UserInformation: Singleton<UserInformation>
 {
     public Inventory Inventory = new Inventory();
     public Character Character = new Character();
+    
 
 
 }

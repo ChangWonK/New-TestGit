@@ -8,11 +8,11 @@
     <Rank>F</Rank>
     <intRank>0</intRank>
     <Level>1</Level>
-    <HumanAtkPower>0.15</HumanAtkPower>
+    <HumanAtkPower>0.2</HumanAtkPower>
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
-    <MachineAtkPower>0</MachineAtkPower>
+    <MachineAtkPower>0.5</MachineAtkPower>
     <MachineAtkSpeed>0</MachineAtkSpeed>
     <MachineAtkRange>0</MachineAtkRange>
     <MachineMoveSpeed>0</MachineMoveSpeed>
@@ -672,7 +672,7 @@
     <HumanAtkSpeed>0</HumanAtkSpeed>
     <HumanAtkRange>0</HumanAtkRange>
     <HumanMoveSpeed>0</HumanMoveSpeed>
-    <MachineAtkPower>0</MachineAtkPower>
+    <MachineAtkPower>0.5</MachineAtkPower>
     <MachineAtkSpeed>0</MachineAtkSpeed>
     <MachineAtkRange>0</MachineAtkRange>
     <MachineMoveSpeed>0</MachineMoveSpeed>

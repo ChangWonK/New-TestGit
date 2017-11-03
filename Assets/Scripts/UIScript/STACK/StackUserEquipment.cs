@@ -41,9 +41,10 @@ public class StackUserEquipment : UIPopupBase
         _scrollView.CreateContent(ContentIndex.ITEM, ContentClickEvent);
     }
 
-    private void ContentClickEvent(long itemUID)
+    private void ContentClickEvent(int itemIndex, long itemUID =0)
     {
-        Debug.Log("Item : " + itemUID);
+        var pop = UIManager.i.CreatePopup<StackItemManagement>(POPUP_TYPE.STACK);
+        pop.Init<StackUserEquipment>(itemIndex, itemUID);
     }
 
 
@@ -78,6 +79,7 @@ public class StackUserEquipment : UIPopupBase
         for (int i = 0; i < _equipmentContentArray.Length; i++)
         {
             _equipmentContentArray[i].SetUIData(0);
+            _equipmentContentArray[i].Callback = ContentClickEvent;
             _equipmentContentArray[i].GetComponent<Button>().enabled = false;
         }
 

@@ -6,11 +6,13 @@ public class Inventory
     private Dictionary<long, Item> _itemDic = new Dictionary<long, Item>();
     private Dictionary<long, Item> _mountingItemDic = new Dictionary<long, Item>();
     private List<TowerBase> _towerList = new List<TowerBase>();
+    public int Money;
+    public int Cash;
 
-    public void AddItem(long uid, Item item)
+
+    public void AddItem(Item item)
     {
-        item.UID = uid;
-        _itemDic.Add(uid, item);
+        _itemDic.Add(item.UID, item);
     }
 
     public void RemoveItem(long uid)
@@ -101,12 +103,5 @@ public class Inventory
     {
         return _towerList.Find((c) => c.UID == uid) as T;
     }
-
-    //public T FetchTower<T>(long uid) where T : TowerBase, new()
-    //{
-    //    T tower = _towerList.Find((c) => c.UID == uid) as T;
-
-    //    return new T() ;
-    //}
 
 }

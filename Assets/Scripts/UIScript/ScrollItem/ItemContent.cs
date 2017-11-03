@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ItemContent : UnitContent
 {
-    public UnityAction<long> Callback;
 
     void Awake()
     {
-        _textRank = GetText("Txt_Rank");
-        _textLevel = GetText("Txt_Level");
-        _imgUnitContent = GetComponent<Image>();
+        _rankTxt = GetText("Txt_Rank");
+        _levelTxt = GetText("Txt_Level");
+        _contentImg = GetComponent<Image>();
 
         GetComponent<Button>().onClick.AddListener(ButtonAction);
     }
@@ -27,9 +25,9 @@ public class ItemContent : UnitContent
         {
             Utility.i.TextBuilder.Append(Utility.ItemNull);
 
-            _imgUnitContent.sprite = Resources.Load<Sprite>(Utility.i.TextBuilder.ToString());
-            _textRank.text = null;
-            _textLevel.text = null;
+            _contentImg.sprite = Resources.Load<Sprite>(Utility.i.TextBuilder.ToString());
+            _rankTxt.text = null;
+            _levelTxt.text = null;
             return;
         }
 
@@ -38,37 +36,21 @@ public class ItemContent : UnitContent
         int itemIndex = (index - 1) / 10;
         Utility.i.TextBuilder.Append(itemIndex);
 
-        _imgUnitContent.sprite = Resources.Load<Sprite>(Utility.i.TextBuilder.ToString());
-        _textRank.text = table.Rank;
+        _contentImg.sprite = Resources.Load<Sprite>(Utility.i.TextBuilder.ToString());
+        _rankTxt.text = table.Rank;
 
         if (table.Level >= 10)
-            _textLevel.text = Utility.LevelGrade + "Max";
+            _levelTxt.text = Utility.LevelGrade + "Max";
         else
-            _textLevel.text = Utility.LevelGrade + table.Level.ToString();
+            _levelTxt.text = Utility.LevelGrade + table.Level.ToString();
     }
  
 
-    public void ButtonAction()
+    public override void ButtonAction()
     {
+        if (_index == 0) return;
+
         if (Callback != null)
-            Callback.Invoke(_uID);
-
-
-        if (UIManager.i.GetStackUIObject<StackItemShop>())
-        {
-           var pop = UIManager.i.CreatePopup<StackItemManagement>(POPUP_TYPE.STACK);
-            pop.Init<StackItemShop>(_index);
-        }
-        else if (UIManager.i.GetStackUIObject<StackUpgradePanel>())
-        {
-            var pop = UIManager.i.GetStackUIObject<StackUpgradePanel>();
-            pop.UpdateData(_uID);
-        }
-        else if (UIManager.i.GetStackUIObject<StackUserEquipment>())
-        {
-            var pop = UIManager.i.CreatePopup<StackItemManagement>(POPUP_TYPE.STACK);
-            pop.Init<StackUserEquipment>(_index, _uID);
-        }
-   
+            Callback.Invoke(_index, _uID);
     }
 }

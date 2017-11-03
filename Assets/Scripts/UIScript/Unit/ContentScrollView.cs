@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +23,7 @@ public class ContentScrollView : MonoBehaviour
     }
 
 
-    public void SetScrollView(int speciesIndex, int scrollDataCount, int lineCount)
+    public void SetScrollView(int speciesIndex, int scrollDataCount, int lineCount, UnityAction<int,long> btnCallback)
     {
         SetScrollViewAxis(scrollDataCount, lineCount);
 
@@ -39,6 +40,7 @@ public class ContentScrollView : MonoBehaviour
                 }
             }
             _contentArray[i].SetUIData(index);
+            _contentArray[i].Callback = btnCallback;
             _contentArray[i].GetComponent<Image>().enabled = true;
             _contentArray[i].GetComponent<Button>().enabled = true;
         }

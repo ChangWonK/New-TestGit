@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class TowerBase
+public abstract class TowerBase 
 {
     public long UID;
     public int LocalIndex;
@@ -16,13 +16,18 @@ public abstract class TowerBase
     public float AtkRange;
     public float MoveSpeed;
 
+    public int FirstSkillIndex;
+    public int SecondSkillIndex;
+    public int ThirdSkillIndex;
+
+
     public void Init(int index)
     {
         var table = TableManager.i.GetTable<TowerData>(index);
 
         UID = (index + 11) / 10;
 
-        Debug.Log(UID);
+
         LocalIndex = index;
         Name = table.Name;
         Kind = table.Species;
@@ -35,11 +40,17 @@ public abstract class TowerBase
         AtkSpeed = table.AtkSpeed;
         AtkRange = table.AtkRange;
         MoveSpeed = table.MoveSpeed;
+
+        FirstSkillIndex = table.FirstSkillIndex;
+        SecondSkillIndex = table.SecondSkillIndex;
+        ThirdSkillIndex = table.ThirdSkillIndex;
     }
 
     public abstract void SetAility();
 
     public abstract float Attack();
+
+    public abstract void Destroy();
 
     //public abstract void AddBuf();
 

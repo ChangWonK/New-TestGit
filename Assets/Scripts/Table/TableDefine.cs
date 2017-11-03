@@ -119,6 +119,7 @@ public class SkillData : Table<SkillData>, ITableRow
 
     public int LocalIndex;
     public string Name;
+    public string Skill;
 
     public int ID
     {
@@ -132,5 +133,7 @@ public class SkillData : Table<SkillData>, ITableRow
     {
         LocalIndex = node.GetInt("LocalIndex");
         Name = node.GetString("Name");
+        Skill = node.GetString("Skill");
+
     }
 }

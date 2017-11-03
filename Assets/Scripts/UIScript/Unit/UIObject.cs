@@ -20,10 +20,10 @@ public class UIObject : MonoBehaviour
         return null;
     }
 
-    protected Text GetText(string textChildName, string textName)
+    protected Text GetText(Transform transform, string textName)
     {
-        var child = transform.Find(textChildName);
-        var texts = child.GetComponentsInChildren<Text>();
+        
+        var texts = transform.GetComponentsInChildren<Text>();
 
         for (int i = 0; i < texts.Length; i++)
         {

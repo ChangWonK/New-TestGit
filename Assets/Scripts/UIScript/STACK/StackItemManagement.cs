@@ -73,7 +73,7 @@ public class StackItemManagement : UIPopupBase
     }
     public void Buy()
     {
-        UnitManager.i.ItemBuy(GetIndex);
+       UnitManager.i.ItemBuy(GetIndex);
 
         UIManager.i.RemoveTopStackUIObject();
     }
@@ -84,7 +84,9 @@ public class StackItemManagement : UIPopupBase
     }
     public void Sell()
     {
-        UnitManager.i.ItemSell(GetUID);
+        //UnitManager.i.ItemSell(GetUID);
+
+        UserInformation.i.Inventory.RemoveItem(GetUID);
 
         UIManager.i.RemoveTopStackUIObject();
     }
@@ -113,7 +115,6 @@ public class StackItemManagement : UIPopupBase
 
         ButtonUpdate();
         _itemInfo.SetUIData(GetIndex);
-
     }
 
     protected override void OnButtonClick(string name)

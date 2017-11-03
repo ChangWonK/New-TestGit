@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public enum ContentIndex
 {
-    ITEM = 0, TOWER
+    ITEM = 0, TOWER, SKILL
 }
 
 public abstract class UnitContent : UIObject
 {
-    protected Image _imgUnitContent;
-    protected Text _textRank;
-    protected Text _textLevel;
+    public UnityAction<int,long> Callback;
+
+    protected Image _contentImg;
+
+    protected Text _rankTxt;
+    protected Text _levelTxt;
 
     protected long _uID;
     protected int _index;
@@ -23,5 +27,8 @@ public abstract class UnitContent : UIObject
         _index = index;
         _uID = uID;
     }
+
+    public abstract void ButtonAction();
+
    
 }

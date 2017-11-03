@@ -3,18 +3,16 @@ using System.Collections.Generic;
 
 public class UnitManager : Singleton<UnitManager>
 {
-    private List<TowerBase> _towerList = new List<TowerBase>();
-
     private bool _isMountingRing = false;
     private string _kindItem = "";
 
-    public void ItemBuy(int index)
+    public Item ItemBuy(int index)
     {
-        Item newItem = new Item(index);
+        Item newItem = new Item(index, Utility.i.GetNextUID());
 
-        Utility.i.GetNextUID();
+        UserInformation.i.Inventory.AddItem(newItem);
 
-        UserInformation.i.Inventory.AddItem(Utility.i.ItemUID, newItem);
+        return newItem;
     }
 
     public void ItemSell(long uID)
@@ -70,6 +68,7 @@ public class UnitManager : Singleton<UnitManager>
     {
         if (upgradeItem.Level >= 10) return null;
 
+
         UserInformation.i.Inventory.RemoveItem(consumableItem.UID);
 
         int ranNum = Random.Range(1, 101);
@@ -119,20 +118,7 @@ public class UnitManager : Singleton<UnitManager>
         return tower.LocalIndex;
     }
 
-    public Tower TowerBuild<T>(Tower tower, int index) where T : TowerBase, new()
-    {
-        tower.TowerBase = new T();
-        tower.TowerBase.Init(index);
-        tower.Init();
 
-        _towerList.Add(tower.TowerBase);
-        return tower;
-    }
-
-    public void RemoveTower(TowerBase tower)
-    {
-        _towerList.Remove(tower);
-    }
 
 
 }

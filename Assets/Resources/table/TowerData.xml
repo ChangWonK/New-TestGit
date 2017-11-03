@@ -7,14 +7,14 @@
     <Species>Human</Species>
     <Rank>F</Rank>
     <Level>1</Level>
-    <AtkPower>120</AtkPower>
+    <AtkPower>100</AtkPower>
     <AtkSpeed>0.5</AtkSpeed>
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>2</Index>
@@ -29,8 +29,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>3</Index>
@@ -45,8 +45,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>4</Index>
@@ -61,8 +61,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>5</Index>
@@ -77,8 +77,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>6</Index>
@@ -93,8 +93,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>7</Index>
@@ -109,8 +109,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>8</Index>
@@ -125,8 +125,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>9</Index>
@@ -141,8 +141,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>10</Index>
@@ -157,8 +157,8 @@
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
     <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>11</Index>
@@ -172,9 +172,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>12</Index>
@@ -188,9 +188,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>13</Index>
@@ -204,9 +204,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>14</Index>
@@ -220,9 +220,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>15</Index>
@@ -236,9 +236,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>16</Index>
@@ -252,9 +252,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>17</Index>
@@ -268,9 +268,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>18</Index>
@@ -284,9 +284,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>19</Index>
@@ -300,9 +300,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>20</Index>
@@ -316,9 +316,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>2</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>21</Index>
@@ -332,9 +332,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>22</Index>
@@ -348,9 +348,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>23</Index>
@@ -364,9 +364,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>24</Index>
@@ -380,9 +380,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>25</Index>
@@ -396,9 +396,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>26</Index>
@@ -412,9 +412,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>27</Index>
@@ -428,9 +428,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>28</Index>
@@ -444,9 +444,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>29</Index>
@@ -460,9 +460,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>30</Index>
@@ -476,57 +476,9 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>31</Index>
-    <LocalIndex>31</LocalIndex>
-    <Name>Test1</Name>
-    <Species>Human</Species>
-    <Rank>D</Rank>
-    <Level>10</Level>
-    <AtkPower>132</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>41</Index>
-    <LocalIndex>41</LocalIndex>
-    <Name>test2</Name>
-    <Species>Human</Species>
-    <Rank>D</Rank>
-    <Level>10</Level>
-    <AtkPower>132</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>51</Index>
-    <LocalIndex>51</LocalIndex>
-    <Name>Test3</Name>
-    <Species>Human</Species>
-    <Rank>D</Rank>
-    <Level>10</Level>
-    <AtkPower>132</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
+    <FirstSkillIndex>3</FirstSkillIndex>
+    <SecondSkillIndex>0</SecondSkillIndex>
+    <ThirdSkillIndex>0</ThirdSkillIndex>
   </xml_node>
   <xml_node>
     <Index>101</Index>
@@ -535,7 +487,7 @@
     <Species>Machine</Species>
     <Rank>F</Rank>
     <Level>1</Level>
-    <AtkPower>24</AtkPower>
+    <AtkPower>100</AtkPower>
     <AtkSpeed>0.5</AtkSpeed>
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>

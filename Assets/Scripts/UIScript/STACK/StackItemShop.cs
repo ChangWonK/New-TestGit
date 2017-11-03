@@ -31,6 +31,12 @@ public class StackItemShop : UIPopupBase
     private void SetContentInfo(int kindIndex, int dataCount)
     {
         int lineCount = 4;
-        _scrollView.SetScrollView(kindIndex, dataCount, lineCount);
+        _scrollView.SetScrollView(kindIndex, dataCount, lineCount, ContentClickEvent);
+    }
+
+    private void ContentClickEvent(int itemIndex, long itemUID=0)
+    {
+        var pop = UIManager.i.CreatePopup<StackItemManagement>(POPUP_TYPE.STACK);
+        pop.Init<StackItemShop>(itemIndex);
     }
 }

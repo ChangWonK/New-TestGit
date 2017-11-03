@@ -29,7 +29,7 @@ public class InfinityScrollView : MonoBehaviour
         _scrollRect = GetComponent<ScrollRect>();
     }
 
-    public void CreateContent(ContentIndex SelectContent, UnityAction<long> btnCallback)
+    public void CreateContent(ContentIndex SelectContent, UnityAction<int,long> btnCallback)
     {
         string path = null;
 

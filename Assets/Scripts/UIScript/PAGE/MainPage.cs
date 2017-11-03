@@ -8,7 +8,7 @@ public class MainPage : UIPopupBase
 {
     public ShowUserInformation ShowUserInfo;
     private TweenPosition[] _tweens;
-    private float _stopDefaultPosX = 125;
+    private float _stopDefaultPosX = 70;
 
     void Awake()
     {
@@ -19,15 +19,6 @@ public class MainPage : UIPopupBase
     void Start()
     {
         RegistAllButtonOnClickEvent();
-        //Transform buttons = transform.Find("Buttons");
-
-        //GetButton(buttons, "Btn_LoadScene").onClick.AddListener(() => GameManager.i.ChangeScene
-        //    (SCENE_NAME.STAGE_SCENE, GameManager.i.MainSceneExitWaiting, GameManager.i.StageScenePrepareWaiting));
-
-        //GetButton(buttons, "Btn_UserEquipment").onClick.AddListener(() => UIManager.i.CreatePopup<UserEquipment>(POPUP_TYPE.STACK));
-        //GetButton(buttons, "Btn_ItemShop").onClick.AddListener(() => UIManager.i.CreatePopup<ItemShop>(POPUP_TYPE.STACK));
-        //GetButton(buttons, "Btn_TowerInformationList").onClick.AddListener(() => UIManager.i.CreatePopup<TowerInformationList>(POPUP_TYPE.STACK));
-
         ButtonTweenPlay(0);
     }
 

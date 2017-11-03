@@ -65,9 +65,9 @@ public class StackUpgradePanel : UIPopupBase
         _scrollView.CreateContent(ContentIndex.ITEM , ContentClickEvent);
     }
 
-    private void ContentClickEvent(long itemUID)
+    private void ContentClickEvent(int itemIndex, long itemUID)
     {
-        Debug.Log("Item : " + itemUID);
+        UpdateData(itemUID);
     }
 
 
@@ -84,6 +84,10 @@ public class StackUpgradePanel : UIPopupBase
         return _showItemList;
     }
 
+    private void CombinationButton()
+    {
+        UIManager.i.CreatePopup<PopupItemRelatedPanel>(POPUP_TYPE.POPUP).PopKind = PopupKind.UpgradePop;
+    }
     public void Combination()
     {
         _upgradeItem = UnitManager.i.ItemCombination(_upgradeItem, _consumableItem, 100);
@@ -91,10 +95,7 @@ public class StackUpgradePanel : UIPopupBase
         SetContentInfo();
         ButtonUpdate(false);
     }
-    private void CombinationButton()
-    {
-        UIManager.i.CreatePopup<PopupItemRelatedPanel>(POPUP_TYPE.POPUP).PopKind = PopupKind.UpgradePop;
-    }
+ 
 
     private UIPopupBase PopupItemRelatedPanel(POPUP_TYPE arg1)
     {

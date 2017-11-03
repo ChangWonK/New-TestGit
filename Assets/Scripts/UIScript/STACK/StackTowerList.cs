@@ -36,7 +36,13 @@ public class StackTowerList : UIPopupBase
         _preSelectIndex = preIndex;
 
         int lineCount = 1;
-        _scrollView.SetScrollView(kindIndex, dataCount, lineCount);
+        _scrollView.SetScrollView(kindIndex, dataCount, lineCount, ContentClickEvent);
+    }
+
+    private void ContentClickEvent(int itemIndex, long itemUID=0)
+    {
+        var popup = UIManager.i.CreatePopup<StackTowerManagement>(POPUP_TYPE.STACK);
+        popup.UpdateData(itemIndex);
     }
 
     public override void ResetUIUpdata()

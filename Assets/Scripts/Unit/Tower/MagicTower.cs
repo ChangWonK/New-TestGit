@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,5 +22,10 @@ public class MagicTower : TowerBase
     {
         Debug.Log("magic atk : " + AtkPower);
         return AtkPower;
+    }
+
+    public override void Destroy()
+    {
+        throw new NotImplementedException();
     }
 }

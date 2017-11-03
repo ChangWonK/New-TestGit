@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class HumanTower : TowerBase
 {
-    public HumanTower(int index)
-    {
-    }
-    public HumanTower() { }
-
     public override void SetAility()
     {
         AtkPower += UserInformation.i.Character.GetHumanAtkPower() * AtkPower;
@@ -20,9 +15,13 @@ public class HumanTower : TowerBase
 
     public override float Attack()
     {
-        Debug.Log("human atk : " + AtkPower);
+        Debug.Log("Human AttackPower : " + AtkPower);
         return AtkPower;
+    }
 
+    public override void Destroy()
+    {
+        Debug.Log("Human Destroy");
     }
 
 }

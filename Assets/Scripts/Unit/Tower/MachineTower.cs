@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class MachineTower : TowerBase
  {
-    public MachineTower(int index)
-    {
-    }
-    public MachineTower() { }
-
     public override void SetAility()
     {
-        Debug.Log(AtkPower);
         AtkPower += UserInformation.i.Character.GetMachineAtkPower() * AtkPower;
         AtkSpeed += UserInformation.i.Character.GetMachineAtkSpeed() * AtkSpeed;
         AtkRange += UserInformation.i.Character.GetMachineAtkRange() * AtkRange;
@@ -20,7 +14,12 @@ public class MachineTower : TowerBase
 
     public override float Attack()
     {
-        Debug.Log("machine atk : " + AtkPower);
+        Debug.Log("Machine AttackPower : " + AtkPower);
         return AtkPower;
+    }
+
+    public override void Destroy()
+    {
+        Debug.Log("Machine Destroy");
     }
 }

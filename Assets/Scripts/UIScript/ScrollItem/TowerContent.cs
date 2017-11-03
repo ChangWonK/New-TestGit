@@ -7,8 +7,8 @@ public class TowerContent : UnitContent
 {
     void Awake ()
     {
-        _textRank = GetText("Txt_Rank");
-        _textLevel = GetText("Txt_Level");
+        _rankTxt = GetText("Txt_Rank");
+        _levelTxt = GetText("Txt_Level");
 
         GetComponent<Button>().onClick.AddListener(ButtonAction);
 	}
@@ -26,18 +26,20 @@ public class TowerContent : UnitContent
 
         var table = TableManager.i.GetTable<TowerData>(index);
 
-        _textRank.text = table.Rank;
+        _rankTxt.text = table.Rank;
 
         if (table.Level >= 10)
-            _textLevel.text = Utility.LevelGrade + "Max";
+            _levelTxt.text = Utility.LevelGrade + "Max";
         else
-            _textLevel.text = Utility.LevelGrade + table.Level.ToString();
+            _levelTxt.text = Utility.LevelGrade + table.Level.ToString();
     }
 
-    public void ButtonAction()
+    public override void ButtonAction()
     {
-        var popup = UIManager.i.CreatePopup<StackTowerManagement>(POPUP_TYPE.STACK);
-        popup.UpdateData(_index);
+        if (_index == 0) return;
+
+        if (Callback != null)
+            Callback.Invoke(_index, _uID);
     }
 
 	
