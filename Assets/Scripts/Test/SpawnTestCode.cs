@@ -22,17 +22,9 @@ public class SpawnTestCode : MonoBehaviour
 
     private void BuildTower<T>(int index) where T : TowerBase, new()
     {
-        var towerObj = Instantiate(_towerPrefab);
-
-        Tower newTower = towerObj.AddComponent<Tower>();
-
-        newTower = SpawnManager.i.BuildTower<T>(newTower, index);
+        SpawnManager.i.CreateTower<T>(_towerPrefab, index);
     }
 
-    private void DestroyTower(Tower tower)
-    {
-        SpawnManager.i.DestroyTower(tower);
-    }
 
     void OnGUI()
     {
@@ -49,22 +41,22 @@ public class SpawnTestCode : MonoBehaviour
         if (GUI.Button(new Rect(0, 400, 100, 100), "human Remove"))
         {
             var tower = SpawnManager.i.GetTower<HumanTower>();
-            SpawnManager.i.DestroyTower(tower);
+            if(tower !=null)
+            SpawnManager.i.RemoveTower(tower.gameObject);
         }
 
         if (GUI.Button(new Rect(0, 600, 100, 100), "machine Remove"))
         {
             var tower = SpawnManager.i.GetTower<MachineTower>();
-            SpawnManager.i.DestroyTower(tower);
+            if (tower != null)
+                SpawnManager.i.RemoveTower(tower.gameObject);
         }
 
         if (GUI.Button(new Rect(1180, 000, 100, 100), "human Attack"))
         {
-            SpawnManager.i.GetTower<HumanTower>().Attack();
         }
         if (GUI.Button(new Rect(1180, 200, 100, 100), "machine Attack"))
         {
-            SpawnManager.i.GetTower<MachineTower>().Attack();
         }
     }
 }

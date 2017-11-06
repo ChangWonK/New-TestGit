@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-
 public class SimpleObjectPool : MonoBehaviour
 {
 
@@ -15,7 +14,7 @@ public class SimpleObjectPool : MonoBehaviour
     }
 
 
-    public PrefabPools[] objectList;
+    public PrefabPools[] objectArray;
 
 
     // 내가 현재 가지고 있는 Object Pool
@@ -37,7 +36,6 @@ public class SimpleObjectPool : MonoBehaviour
         }
     }  
 
-
     void Start()
     {
         transform.position = new Vector3(0,0,0);
@@ -52,7 +50,33 @@ public class SimpleObjectPool : MonoBehaviour
         {
             GameObject temp = new GameObject("SimpleObjectPool");
             instance = temp.AddComponent<SimpleObjectPool>();
-        }        
+        }
+
+        instance.CreatePool();
+    }
+
+    private void CreatePool()
+    {
+        for (int i = 0; i < objectArray.Length; i++)
+        {
+            List<GameObject> temp;
+
+            if(poolObjects.TryGetValue(objectArray[i].prefab, out temp) == false)
+            {
+                temp = new List<GameObject>();
+
+                instance.poolObjects.Add(objectArray[i].prefab, temp);
+
+                while(temp.Count < objectArray[i].size)
+                {
+                    GameObject obj = Instantiate(objectArray[i].prefab) as GameObject;
+                    obj.transform.SetParent(instance.transform, false);
+                    temp.Add(obj);
+                    obj.SetActive(false);
+                }
+
+            }
+        }
     }
  
     /// <summary>
@@ -81,7 +105,6 @@ public class SimpleObjectPool : MonoBehaviour
                 {
                     obj = remainPool[0];
                     remainPool.RemoveAt(0);
-
                 }
             }
 
@@ -136,11 +159,10 @@ public class SimpleObjectPool : MonoBehaviour
         Recycle(obj);
     }
 
-
-
     public static void Recycle(GameObject obj)
     {
         GameObject prefab;
+
 
         if (Instacne.spawnObjectlist.TryGetValue(obj, out prefab))
         {

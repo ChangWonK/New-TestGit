@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using uTools;
 
 
-public class MainPage : UIPopupBase
+public class PageMain : UIPopupBase
 {
     public ShowUserInformation ShowUserInfo;
     private TweenPosition[] _tweens;

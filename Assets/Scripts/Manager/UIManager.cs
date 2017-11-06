@@ -54,10 +54,14 @@ public class UIManager : MonoBehaviour
 
     private UIPopupBase _pagePop = null;
 
+    [HideInInspector]
+    public Camera UICamera;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
         FindSpecificTransform();
+        UICamera = GetComponentInChildren<Camera>();
     }
 
     void Update()

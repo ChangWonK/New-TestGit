@@ -70,7 +70,7 @@ public class GameManager : Singleton<GameManager>
 
     public void MainScenePrepareWaiting()
     {
-        var mainPop = UIManager.i.CreatePopup<MainPage>(POPUP_TYPE.PAGE);
+        var mainPop = UIManager.i.CreatePopup<PageMain>(POPUP_TYPE.PAGE);
         var pop = UIManager.i.GetPopupUIObject<FadeInOut>();
 
         SceneManager.i.Done();

@@ -4,31 +4,38 @@ using UnityEngine;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
-    private List<Tower> _towerList = new List<Tower>();
+    private List<GameObject> _towerList = new List<GameObject>();
+    private List<GameObject> _enemyList = new List<GameObject>();
 
-    public Tower BuildTower<T>(Tower tower, int index) where T : TowerBase, new()
+    public Tower CreateTower<T>(GameObject towerPrefab, int index) where T : TowerBase, new()
     {
+        towerPrefab = SimpleObjectPool.SpawnPoolObject(towerPrefab, Vector3.zero, Quaternion.identity);
+
+        Tower tower = towerPrefab.GetComponent<Tower>();
+
         tower.TowerBase = new T();
         tower.TowerBase.Init(index);
         tower.Init();
 
-        _towerList.Add(tower);
+        _towerList.Add(towerPrefab);
         return tower;
     }
 
-    public void DestroyTower(Tower tower)
+    public void RemoveTower(GameObject towerPrefab)
     {
-        if (tower == null) return;
+        if (towerPrefab == null) return;
 
-        _towerList.Remove(tower);
-        Destroy(tower.gameObject);
+        towerPrefab.Recycle();
+        _towerList.Remove(towerPrefab);
     }
 
     public Tower GetTower<T>() where T : TowerBase
     {
-        var tower = _towerList.Find((c) => c.TowerBase is T);
+        var towerObject = _towerList.Find((c) => c.GetComponent<Tower>().TowerBase is T);
 
-        return tower;
+        if (towerObject == null) return null;
+
+        return towerObject.GetComponent<Tower>();
     }
 
 }
