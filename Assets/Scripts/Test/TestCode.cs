@@ -15,6 +15,8 @@ public class TestCode : MonoBehaviour
         _prefab = Resources.Load<GameObject>("Prefabs/3DObject/Tower/TowerPrefab");
     }
 
+    
+
     void OnGUI()
     {
         if (GUI.Button(new Rect(0, 0, 100, 100), "human ADD"))

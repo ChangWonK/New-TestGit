@@ -8,6 +8,10 @@ public enum ContentIndex
 {
     ITEM = 0, TOWER, SKILL
 }
+public enum GameKind
+{
+    NORMAL = 0, FREE, CHALLENGE
+}
 
 public abstract class UnitContent : UIObject
 {

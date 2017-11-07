@@ -57,6 +57,10 @@ public class PageScrollView : MonoBehaviour
         _camera = UIManager.i.UICamera;
     }
 
+    public void CreateContent()
+    {
+    }
+
     private void LocationContents()
     {
         float posX = 0;
