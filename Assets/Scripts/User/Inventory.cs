@@ -6,7 +6,7 @@ public class Inventory
     private Dictionary<long, Item> _itemDic = new Dictionary<long, Item>();
     private Dictionary<long, Item> _mountingItemDic = new Dictionary<long, Item>();
     private List<TowerBase> _towerList = new List<TowerBase>();
-    public int Money;
+    public int Money = 10000;
     public int Cash;
 
 

@@ -150,6 +150,11 @@ public class UIManager : MonoBehaviour
         return obj.GetComponent<T>();
     }
 
+    public void RemovePageUIObject()
+    {
+        Destroy(_pagePop.gameObject);
+    }
+
     public void RemoveStackUIObject<T>() where T : UIPopupBase
     {
         T obj = _stackList.Find((c) => c is T) as T;
@@ -163,6 +168,8 @@ public class UIManager : MonoBehaviour
 
     public void RemovePopupUIObject<T>() where T : UIPopupBase
     {
+
+
         T obj = _popupList.Find((c) => c is T) as T;
 
         if (obj == null)
@@ -174,6 +181,7 @@ public class UIManager : MonoBehaviour
 
     public void RemoveTopPopupUIObject()
     {
+
         if (_popupList.Count > 0)
         {
             var lastPop = _popupList.FindLast((c) => c);
@@ -188,6 +196,7 @@ public class UIManager : MonoBehaviour
 
     public void RemoveTopStackUIObject()
     {
+
         if (_stackList.Count > 0)
         {
             var lastPop = _stackList.FindLast((c) => c);
@@ -198,9 +207,11 @@ public class UIManager : MonoBehaviour
             if(pop !=null) pop.ResetUIUpdata();
         }
     }
+
     public void RemoveTopUIObject()
     {
-       if(_popupList.Count > 0)
+
+        if (_popupList.Count > 0)
         {
             RemoveTopPopupUIObject();
             return;
@@ -209,63 +220,5 @@ public class UIManager : MonoBehaviour
         RemoveTopStackUIObject();
     }
 
-
-    //public void RemoveLastUIObject()
-    //{
-    //    int findNumCompare = 0;
-
-    //    bool isActive = _popupList.Find((c) => c is FadeInOut);
-    //    if (isActive == true) findNumCompare = 1;
-
-    //    int FindNum = _popupList.FindLastIndex((c) => c);
-
-
-    //    if (FindNum > findNumCompare)
-    //    {
-    //        Destroy(_popupList[FindNum].gameObject);
-    //        _popupList.RemoveAt(FindNum);
-    //    }
-    //}
-
-    //public void RemoveTopUIObject(UnityAction action = null)
-    //{
-    //    List<UIPopupBase> stackList = new List<UIPopupBase>();
-
-    //    var page = GetPopupUIObject<MainPage>();
-
-    //    int topPopup = _popupList.Count  - 1;
-
-    //    if(topPopup >= 0)
-    //    {
-    //        Destroy(_popupList[topPopup].gameObject);
-
-    //        _popupList.RemoveAt(topPopup);
-
-    //        if(_popupList.Count > 0 && action != null)
-    //        {
-    //            _popupList[_popupList.Count - 1].ResetUIUpdata();
-    //        }
-    //    }
-    //}
-   
-    //public void RemoveAllObject()
-    //{
-    //    _uiPopupList.FindAll((c) =>
-    //    {
-    //        if (c is FadeInOut)
-    //        {
-    //            return false;
-    //        }
-    //        else
-    //        {
-    //            if (c == null)
-    //                return true;
-
-    //            Destroy(c.gameObject);
-    //            _uiPopupList.Remove(c);
-    //            return true;
-    //        }
-    //    });
-    //}
 
 }

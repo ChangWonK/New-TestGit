@@ -1,16 +1,14 @@
 ﻿using UnityEngine.UI;
 
-public enum PopupKind { UpgradePop =0, BuyPop, SellPop}
-
 public class PopupItemRelatedPanel : UIPopupBase
 {
     public PopupKind PopKind = 0;
 
-    private Text _textQuestion;
+    private Text _questionTxt;
 
     void Awake()
     {
-        _textQuestion = GetText("Txt_Question");
+        _questionTxt = GetText("Txt_Question");
     }
 
     void Start()
@@ -18,34 +16,36 @@ public class PopupItemRelatedPanel : UIPopupBase
         RegistAllButtonOnClickEvent();
 
         if(PopKind == PopupKind.UpgradePop)
-            _textQuestion.text = Utility.UpgradeQuestion;
+            _questionTxt.text = Utility.UpgradeQuestion;
         if (PopKind == PopupKind.BuyPop)
-            _textQuestion.text = Utility.BuyQuestion;
+            _questionTxt.text = Utility.BuyQuestion;
         if(PopKind == PopupKind.SellPop)
-            _textQuestion.text = Utility.SellQuestion;
+            _questionTxt.text = Utility.SellQuestion;
     }
 
-    private void UpgradeButtonYes()
+    private void UpgradeButton()
     {
         UIManager.i.GetStackUIObject<StackUpgradePanel>().Combination();
-        UIManager.i.RemoveTopPopupUIObject();
+        UIManager.i.RemovePopupUIObject<PopupItemRelatedPanel>();
     }
 
-    private void BuyButtonYes()
+    private void BuyButton()
     {
-        UIManager.i.GetStackUIObject<StackItemManagement>().Buy();
-        UIManager.i.RemoveTopPopupUIObject();
+        if(UIManager.i.GetStackUIObject<StackItemManagement>().Buy())
+        {
+            UIManager.i.RemovePopupUIObject<PopupItemRelatedPanel>();
+        }
     }
 
-    private void SellButtonYes()
+    private void SellButton()
     {
         UIManager.i.GetStackUIObject<StackItemManagement>().Sell();
-        UIManager.i.RemoveTopPopupUIObject();
+        UIManager.i.RemovePopupUIObject<PopupItemRelatedPanel>();
     }
 
-    private void ButtonNo()
+    private void NoButton()
     {
-        UIManager.i.RemoveTopPopupUIObject();
+        UIManager.i.RemovePopupUIObject<PopupItemRelatedPanel>();
     }
 
     protected override void OnButtonClick(string name)
@@ -55,15 +55,15 @@ public class PopupItemRelatedPanel : UIPopupBase
         if (name == "Btn_Yes")
         {
             if (PopKind == PopupKind.UpgradePop)
-                UpgradeButtonYes();
+                UpgradeButton();
             if (PopKind == PopupKind.BuyPop)
-                BuyButtonYes();
+                BuyButton();
             if (PopKind == PopupKind.SellPop)
-                SellButtonYes();
+                SellButton();
         }
         if (name == "Btn_No")
         {
-            ButtonNo();
+            NoButton();
         }
     }
 }

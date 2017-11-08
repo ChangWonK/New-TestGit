@@ -4,6 +4,13 @@ using System.Collections;
 
 public class GameManager : Singleton<GameManager>
 {
+    [HideInInspector]
+    public GameMode GameMode;
+    [HideInInspector]
+    public int GameStage;
+    [HideInInspector]
+    public int GameMap;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -16,23 +23,6 @@ public class GameManager : Singleton<GameManager>
 
         ChangeScene(SCENE_NAME.LOGO_SCENE, IntroSceneExitWaiting, LogoScenePrepareWaiting);
     }
-
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Escape))
-    //    {
-    //        if (UIManager.i.GetUIObject<ItemManagement>())
-    //        {
-    //            var pop = UIManager.i.GetUIObject<ItemManagement>();
-
-    //            UIManager.i.RemoveTopUIObject(pop.Reset);
-    //            return;
-    //        }
-
-    //        UIManager.i.RemoveTopUIObject();
-    //    }
-
-    //}
 
     //******************** Scene **********************//
 
@@ -59,7 +49,7 @@ public class GameManager : Singleton<GameManager>
         SceneManager.i.Done();
 
         pop.FadeIn(() => UIManager.i.RemovePopupUIObject<FadeInOut>());
-        StartCoroutine(DelayTimeFunc(1.8f, () => { ChangeScene(SCENE_NAME.GAME_SCENE, LogoSceneExitWaiting, MainScenePrepareWaiting); }));
+        StartCoroutine(DelayTimeFunc(1.8f, () => { ChangeScene(SCENE_NAME.MAIN_SCENE, LogoSceneExitWaiting, MainScenePrepareWaiting); }));
     }
 
     public void LogoSceneExitWaiting()
@@ -81,17 +71,22 @@ public class GameManager : Singleton<GameManager>
 
     public void MainSceneExitWaiting()
     {
+        UIManager.i.RemovePageUIObject();
         SceneManager.i.Done();
     }
 
     public void StageScenePrepareWaiting()
     {
+        var stagePop = UIManager.i.CreatePopup<PageStage>(POPUP_TYPE.PAGE);
+
         var pop = UIManager.i.GetPopupUIObject<FadeInOut>();
 
         SceneManager.i.Done();
 
         pop.FadeIn(() => UIManager.i.RemovePopupUIObject<FadeInOut>());
     }
+
+
 
     private IEnumerator DelayTimeFunc(float time, UnityAction func)
     {

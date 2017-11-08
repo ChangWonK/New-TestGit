@@ -26,18 +26,19 @@ public class PopupTowerRelatedPanel : UIPopupBase
     private void UpgradeButtonYes()
     {
         UIManager.i.GetStackUIObject<StackTowerManagement>().Upgrade();
-        UIManager.i.RemoveTopPopupUIObject();
+        UIManager.i.RemovePopupUIObject<PopupTowerRelatedPanel>();
+
     }
 
     private void BuyButtonYes()
     {
         UIManager.i.GetStackUIObject<StackTowerManagement>().Buy();
-        UIManager.i.RemoveTopPopupUIObject();
+        UIManager.i.RemovePopupUIObject<PopupTowerRelatedPanel>();
     }
 
     private void ButtonNo()
     {
-        UIManager.i.RemoveTopPopupUIObject();
+        UIManager.i.RemovePopupUIObject<PopupTowerRelatedPanel>();
     }
 
     protected override void OnButtonClick(string name)

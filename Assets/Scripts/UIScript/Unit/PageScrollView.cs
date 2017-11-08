@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class PageScrollView : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class PageScrollView : MonoBehaviour
         }
     }
 
-    public void Init(int Distance, int count)
+    public void Init(int Distance, int count, UnityAction<GameMode, int> callBack)
     {
         _contentsDistance = Distance;
         _contentCount = count;
@@ -55,10 +56,26 @@ public class PageScrollView : MonoBehaviour
 
         LocationContents();
         _camera = UIManager.i.UICamera;
+
+        CreateContent(callBack);
     }
 
-    public void CreateContent()
+    public void CreateContent(UnityAction<GameMode, int> callBack)
     {
+       StageContent[] normalContent = _contentParent.GetChild(0).GetComponentsInChildren<StageContent>();
+        StageContent[] freeContent = _contentParent.GetChild(1).GetComponentsInChildren<StageContent>();
+        StageContent[] challengeContent = _contentParent.GetChild(2).GetComponentsInChildren<StageContent>();
+
+        for (int i = 0; i < normalContent.Length; i++)
+        {
+            normalContent[i].SetUIData(GameMode.NORMAL, i);
+            normalContent[i].CallBack = callBack;
+        }
+        for (int i = 0; i < freeContent.Length; i++)
+        {
+            freeContent[i].SetUIData(GameMode.FREE, i);
+            freeContent[i].CallBack = callBack;
+        }
     }
 
     private void LocationContents()

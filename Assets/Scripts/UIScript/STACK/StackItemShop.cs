@@ -1,10 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-
-public class StackItemShop : UIPopupBase
+﻿public class StackItemShop : UIPopupBase
 {
     private ContentScrollView _scrollView;
     private TabButton _tabButton;

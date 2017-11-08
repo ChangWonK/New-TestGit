@@ -1,5 +1,9 @@
-﻿public class UIPopupBase : UIObject
+﻿using UnityEngine;
+public enum PopupKind { UpgradePop = 0, BuyPop, SellPop, PlayGame, }
+
+public class UIPopupBase : UIObject
 {
+    [HideInInspector]
     public POPUP_TYPE TYPE;
 
 

@@ -5,7 +5,6 @@ using System;
 
 public class SimpleObjectPool : MonoBehaviour
 {
-
     [Serializable]
     public class PrefabPools
     {
@@ -50,7 +49,6 @@ public class SimpleObjectPool : MonoBehaviour
         {
             GameObject temp = new GameObject("SimpleObjectPool");
             instance = temp.AddComponent<SimpleObjectPool>();
-<<<<<<< HEAD
         }
 
         instance.CreatePool();
@@ -79,41 +77,7 @@ public class SimpleObjectPool : MonoBehaviour
             }
         }
     }
- 
-=======
-        }
 
-        instance.CreateStartUpPools();
-    }
-
-    private void CreateStartUpPools()
-    {
-        if (objectList == null)
-            return;
-
-        for (int i = 0; i < objectList.Length; i++)
-        {
-            List<GameObject> temp;
-
-            if (!poolObjects.TryGetValue(objectList[i].prefab, out temp)) // 만약 오브젝트 풀에 없으면 
-            {
-                temp = new List<GameObject>();
-
-                instance.poolObjects.Add(objectList[i].prefab, temp);
-
-                while (temp.Count < objectList[i].size)
-                {
-                    GameObject obj = Instantiate(objectList[i].prefab) as GameObject;
-                    obj.transform.SetParent(instance.transform, false);
-                    temp.Add(obj);
-
-                    obj.SetActive(false);
-                }
-            }
-        }
-    }
-
->>>>>>> 60083e04c6c8431a1fd7006c6a20625bfc4800c7
     /// <summary>
     ///     /// 
     /// </summary>

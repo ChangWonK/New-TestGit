@@ -5,28 +5,30 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class StageContent : MonoBehaviour
+public class StageContent : UIObject
 {
-    public UnityAction<GameKind, int> CallBack;
-    private GameKind _gameKind;
-    private int _mapLevel;
+    private Text _nameTxt;
+    private GameMode _gameMode;
+    private int _stageLevel;
 
+    public UnityAction<GameMode, int> CallBack;
 
     void Awake()
     {
+        _nameTxt = GetText("Text");
         GetComponent<Button>().onClick.AddListener(ButtonAction);
     }
 
-    public void SetUIData(GameKind gameKind, int mapLevel)
+    public void SetUIData(GameMode gameKind, int stageLevel)
     {
-        _gameKind = gameKind;
-        _mapLevel = mapLevel;
+        _gameMode = gameKind;
+        _stageLevel = stageLevel;
     }
 
     public void ButtonAction()
     {
         if (CallBack != null)
-            CallBack.Invoke(_gameKind, _mapLevel);
+            CallBack.Invoke(_gameMode, _stageLevel);
     }
 
 }

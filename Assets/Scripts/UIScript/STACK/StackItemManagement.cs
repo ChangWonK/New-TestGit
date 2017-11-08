@@ -69,13 +69,24 @@ public class StackItemManagement : UIPopupBase
 
     private void BuyButton()
     {
-        UIManager.i.CreatePopup<PopupItemRelatedPanel>(POPUP_TYPE.POPUP).PopKind = PopupKind.BuyPop;
+        var pop = UIManager.i.CreatePopup<PopupItemRelatedPanel>(POPUP_TYPE.POPUP);
+            pop.PopKind = PopupKind.BuyPop;
     }
-    public void Buy()
+    public bool Buy()
     {
-       UnitManager.i.ItemBuy(GetIndex);
+      var newItem = UnitManager.i.ItemBuy(GetIndex);
 
-        UIManager.i.RemoveTopStackUIObject();
+        if (newItem.Cost > UserInformation.i.Inventory.Money)
+        {
+            UIManager.i.CreatePopup<PopupWarning>(POPUP_TYPE.POPUP);
+            return false;
+        }
+
+        newItem.UID = Utility.i.GetNextUID();
+            UserInformation.i.Inventory.AddItem(newItem);
+
+        UIManager.i.RemoveStackUIObject<StackItemManagement>();
+        return true;
     }
 
     private void SellButton()
@@ -86,6 +97,13 @@ public class StackItemManagement : UIPopupBase
     {
         //UnitManager.i.ItemSell(GetUID);
 
+       float cost = UserInformation.i.Inventory.FindItem(GetUID).Cost;
+        cost *= 0.5f;
+
+        Debug.Log(cost);
+        Debug.Log(UserInformation.i.Inventory.Money);
+        UserInformation.i.Inventory.Money += (int)cost;
+        Debug.Log(UserInformation.i.Inventory.Money);
         UserInformation.i.Inventory.RemoveItem(GetUID);
 
         UIManager.i.RemoveTopStackUIObject();
@@ -111,7 +129,7 @@ public class StackItemManagement : UIPopupBase
 
     public override void ResetUIUpdata()
     {
-        base.ResetUIUpdata();
+        //base.ResetUIUpdata();
 
         ButtonUpdate();
         _itemInfo.SetUIData(GetIndex);

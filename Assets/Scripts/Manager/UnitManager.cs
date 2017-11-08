@@ -8,9 +8,7 @@ public class UnitManager : Singleton<UnitManager>
 
     public Item ItemBuy(int index)
     {
-        Item newItem = new Item(index, Utility.i.GetNextUID());
-
-        UserInformation.i.Inventory.AddItem(newItem);
+        Item newItem = new Item(index);
 
         return newItem;
     }
@@ -68,7 +66,6 @@ public class UnitManager : Singleton<UnitManager>
     {
         if (upgradeItem.Level >= 10) return null;
 
-
         UserInformation.i.Inventory.RemoveItem(consumableItem.UID);
 
         int ranNum = Random.Range(1, 101);
@@ -78,7 +75,9 @@ public class UnitManager : Singleton<UnitManager>
         {
             int nextLevel = upgradeItem.LocalIndex + 1;
 
-            ItemBuy(nextLevel);
+            Item ee = new Item(nextLevel, Utility.i.GetNextUID());
+
+            UserInformation.i.Inventory.AddItem(ee);
 
             Item newItem = UserInformation.i.Inventory.FindItem(Utility.i.ItemUID);
 
