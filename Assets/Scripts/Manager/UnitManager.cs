@@ -13,9 +13,10 @@ public class UnitManager : Singleton<UnitManager>
         return newItem;
     }
 
-    public void ItemSell(long uID)
+    public void ItemSell()
     {
-        UserInformation.i.Inventory.RemoveItem(uID);
+        UIManager.i.RemoveTopStackUIObject();
+        UIManager.i.GetPageUIObject<PageMain>().ResetUIUpdata();
     }
 
     public void ItemMounting(long uID)
@@ -103,12 +104,12 @@ public class UnitManager : Singleton<UnitManager>
 
         newTower.Init(index);
 
-        UserInformation.i.Inventory.AddTower(newTower);
+            UserInformation.i.Inventory.AddTower(newTower);
     }
 
     public int UITowerUpgrade(long uid)
     {
-        var tower = UserInformation.i.Inventory.FindTower(uid);
+        var tower = UserInformation.i.Inventory.GetTower(uid);
 
         int nextIndex = tower.LocalIndex++;
 

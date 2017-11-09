@@ -14,16 +14,17 @@ public class TowerData : Table<TowerData> , ITableRow
     public string Species;
     public string Rank;
     public int Level;
+    public int Cost;
+    public int GameCost;
+
     public float AtkPower;
     public float AtkSpeed;
     public float AtkRange;
     public float MoveSpeed;    
-    public int Cost;
-
+  
     public int FirstSkillIndex;
     public int SecondSkillIndex;
     public int ThirdSkillIndex;
-
 
     public int ID
     {
@@ -40,11 +41,14 @@ public class TowerData : Table<TowerData> , ITableRow
         Species = node.GetString("Species");
         Rank = node.GetString("Rank");
         Level = node.GetInt("Level");
+        Cost = node.GetInt("Cost");
+        GameCost = node.GetInt("GameCost");
+
         AtkPower = node.GetFloat("AtkPower");
         AtkSpeed = node.GetFloat("AtkSpeed");
         AtkRange = node.GetFloat("AtkRange");
         MoveSpeed = node.GetFloat("MoveSpeed");
-        Cost = node.GetInt("Cost");
+       
         FirstSkillIndex = node.GetInt("FirstSkillIndex");
         SecondSkillIndex = node.GetInt("SecondSkillIndex");
         ThirdSkillIndex = node.GetInt("ThirdSkillIndex");

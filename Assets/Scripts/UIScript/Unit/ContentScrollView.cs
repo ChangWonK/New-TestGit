@@ -34,9 +34,9 @@ public class ContentScrollView : MonoBehaviour
             if(ScrollContentKind.TOWER == _contentKind)
             {
                 long uid = (index + 11) / 10;
-                if (UserInformation.i.Inventory.FindTower(uid) != null)
+                if (UserInformation.i.Inventory.GetTower(uid) != null)
                 {
-                    index = UserInformation.i.Inventory.FindTower(uid).LocalIndex;
+                    index = UserInformation.i.Inventory.GetTower(uid).LocalIndex;
                 }
             }
             _contentArray[i].SetUIData(index);

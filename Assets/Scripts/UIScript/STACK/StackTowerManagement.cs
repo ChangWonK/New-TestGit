@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -37,8 +35,6 @@ public class StackTowerManagement : UIPopupBase
 
     }
 
-
-
     private void UpgradeButton()
     {
         UIManager.i.CreatePopup<PopupTowerRelatedPanel>(POPUP_TYPE.POPUP).PopKind = PopupKind.UpgradePop;
@@ -55,11 +51,11 @@ public class StackTowerManagement : UIPopupBase
     }
     public void Buy()
     {
-        if (_getIndex >= 100)
+        if (_getIndex <= 100)
             UnitManager.i.UITowerBuy<HumanTower>(_getIndex);
-        else if (_getIndex >= 200)
+        else if (_getIndex <= 200)
             UnitManager.i.UITowerBuy<MachineTower>(_getIndex);
-        else if (_getIndex >= 300)
+        else if (_getIndex <= 300)
             UnitManager.i.UITowerBuy<MagicTower>(_getIndex);
 
         UpdateData(_getIndex);
@@ -85,7 +81,7 @@ public class StackTowerManagement : UIPopupBase
 
     private void UpdateButton()
     {
-        TowerBase tower = UserInformation.i.Inventory.FindTower(_getUID);
+        TowerBase tower = UserInformation.i.Inventory.GetTower(_getUID);
 
         if (tower == null)
         {
@@ -109,8 +105,8 @@ public class StackTowerManagement : UIPopupBase
 
         SetContent();
 
-        if (UserInformation.i.Inventory.FindTower(_getUID) != null)
-            _getIndex = UserInformation.i.Inventory.FindTower(_getUID).LocalIndex;
+        if (UserInformation.i.Inventory.GetTower(_getUID) != null)
+            _getIndex = UserInformation.i.Inventory.GetTower(_getUID).LocalIndex;
 
         _towerInfo.SetUIData(_getIndex);
 

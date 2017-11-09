@@ -6,22 +6,28 @@ using uTools;
 
 public class PageMain : UIPopupBase
 {
-    public ShowUserInformation ShowUserInfo;
     private TweenPosition[] _tweens;
     private float _stopDefaultPosX = 70;
+    private Text _moneyTxt;
 
     void Awake()
     {
+        Transform trans = transform.Find("Text");
+        _moneyTxt = GetText(trans, "Txt_Money");
         _tweens = GetComponentsInChildren<TweenPosition>();
-        ShowUserInfo = GetComponentInChildren<ShowUserInformation>();
     }
 
     void Start()
     {
         RegistAllButtonOnClickEvent();
         ButtonTweenPlay(0);
+        ResetUIUpdata();
     }
 
+    public override void ResetUIUpdata()
+    {
+        _moneyTxt.text = UserInformation.i.Inventory.Money.ToString();
+    }
 
     public void ButtonTweenPlay(int index)
     {

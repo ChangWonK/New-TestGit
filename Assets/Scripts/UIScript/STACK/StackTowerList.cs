@@ -3,7 +3,7 @@ public class StackTowerList : UIPopupBase
 {
     enum TabBtn
     {
-        HUMAN, MACHINE, MAGIC, BUF
+        HUMAN, MACHINE, MAGIC
     }
 
     private ContentScrollView _scrollView;
@@ -26,7 +26,6 @@ public class StackTowerList : UIPopupBase
         _tabButton.AddListener(0, () => SetContentInfo(1, 3,0));
         _tabButton.AddListener(1, () => SetContentInfo(101, 3,1));
         _tabButton.AddListener(2, () => SetContentInfo(201, 3,2));
-        _tabButton.AddListener(3, () => SetContentInfo(301, 3,3));
 
         _tabButton.Initialize(_preSelectIndex);
     }
@@ -39,10 +38,10 @@ public class StackTowerList : UIPopupBase
         _scrollView.SetScrollView(kindIndex, dataCount, lineCount, ContentClickEvent);
     }
 
-    private void ContentClickEvent(int itemIndex, long itemUID=0)
+    private void ContentClickEvent(int towerIndex, long itemUID=0)
     {
         var popup = UIManager.i.CreatePopup<StackTowerManagement>(POPUP_TYPE.STACK);
-        popup.UpdateData(itemIndex);
+        popup.UpdateData(towerIndex);
     }
 
     public override void ResetUIUpdata()

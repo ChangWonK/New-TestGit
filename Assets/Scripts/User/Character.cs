@@ -2,6 +2,9 @@
 
 public class Character
 {
+    private int _gameMoney = 100;
+    private int _gameLife;
+
     private float _humanAtkPower;
     private float _humanAtkSpeed;
     private float _humanAtkRange;
@@ -22,9 +25,9 @@ public class Character
 
     private void GetItemAbility()
     {
-       var enumer =  UserInformation.i.Inventory.GetEnumerMountingItemDic();
+        var enumer = UserInformation.i.Inventory.GetEnumerMountingItemDic();
 
-        while(enumer.MoveNext())
+        while (enumer.MoveNext())
         {
             _humanAtkPower += enumer.Current.Value.HumanAtkPower;
             _humanAtkSpeed += enumer.Current.Value.HumanAtkSpeed;
@@ -43,6 +46,8 @@ public class Character
         }
     }
 
+    public int GetGameMoney() { return _gameMoney; }
+    public int GetGameLife() { return _gameLife; }
 
 
     public float GetHumanAtkPower() { return _humanAtkPower; }

@@ -27,7 +27,7 @@ public class StackItemManagement : UIPopupBase
 
     }
 
-    public void  Init<T>(int index, long uid=0) where T : UIPopupBase
+    public void Init<T>(int index, long uid = 0) where T : UIPopupBase
     {
         GetIndex = index;
         GetUID = uid;
@@ -51,7 +51,7 @@ public class StackItemManagement : UIPopupBase
 
     private void ButtonUpdate()
     {
-        if(GetUID <= 0)
+        if (GetUID <= 0)
             return;
 
         if (UserInformation.i.Inventory.FindItem(GetUID).Level == 10)
@@ -59,7 +59,7 @@ public class StackItemManagement : UIPopupBase
             _upgradeBtn.interactable = false;
         }
 
-        if (UserInformation.i.Inventory.FindMountingItem(GetUID) ==null)
+        if (UserInformation.i.Inventory.FindMountingItem(GetUID) == null)
         {
             _realeaseBtn.interactable = false;
             return;
@@ -70,11 +70,11 @@ public class StackItemManagement : UIPopupBase
     private void BuyButton()
     {
         var pop = UIManager.i.CreatePopup<PopupItemRelatedPanel>(POPUP_TYPE.POPUP);
-            pop.PopKind = PopupKind.BuyPop;
+        pop.PopKind = PopupKind.BuyPop;
     }
     public bool Buy()
     {
-      var newItem = UnitManager.i.ItemBuy(GetIndex);
+        var newItem = UnitManager.i.ItemBuy(GetIndex);
 
         if (newItem.Cost > UserInformation.i.Inventory.Money)
         {
@@ -83,9 +83,12 @@ public class StackItemManagement : UIPopupBase
         }
 
         newItem.UID = Utility.i.GetNextUID();
-            UserInformation.i.Inventory.AddItem(newItem);
+        UserInformation.i.Inventory.AddItem(newItem);
+
+        UserInformation.i.Inventory.Money -= newItem.Cost;
 
         UIManager.i.RemoveStackUIObject<StackItemManagement>();
+        UIManager.i.GetPageUIObject<PageMain>().ResetUIUpdata();
         return true;
     }
 
@@ -95,18 +98,15 @@ public class StackItemManagement : UIPopupBase
     }
     public void Sell()
     {
-        //UnitManager.i.ItemSell(GetUID);
 
-       float cost = UserInformation.i.Inventory.FindItem(GetUID).Cost;
+        float cost = UserInformation.i.Inventory.FindItem(GetUID).Cost;
         cost *= 0.5f;
 
-        Debug.Log(cost);
-        Debug.Log(UserInformation.i.Inventory.Money);
         UserInformation.i.Inventory.Money += (int)cost;
-        Debug.Log(UserInformation.i.Inventory.Money);
         UserInformation.i.Inventory.RemoveItem(GetUID);
 
-        UIManager.i.RemoveTopStackUIObject();
+        UnitManager.i.ItemSell();
+   
     }
 
     private void UpgradeButton()

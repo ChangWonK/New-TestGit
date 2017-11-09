@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : Singleton<SpawnManager>
@@ -7,9 +6,9 @@ public class SpawnManager : Singleton<SpawnManager>
     private List<GameObject> _towerList = new List<GameObject>();
     private List<GameObject> _enemyList = new List<GameObject>();
 
-    public Tower CreateTower<T>(GameObject towerPrefab, int index) where T : TowerBase, new()
+    public Tower CreateTower<T>(GameObject towerPrefab, int index, Transform parent) where T : TowerBase, new()
     {
-        towerPrefab = SimpleObjectPool.SpawnPoolObject(towerPrefab, Vector3.zero, Quaternion.identity);
+        towerPrefab = SimpleObjectPool.SpawnPoolObject(towerPrefab, Vector3.zero, Quaternion.identity, parent);
 
         Tower tower = towerPrefab.GetComponent<Tower>();
 

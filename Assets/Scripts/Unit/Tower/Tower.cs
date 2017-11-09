@@ -12,38 +12,30 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-
-        switch(_currentState)
-        {
-            case States.WATING:
-                {
-
-                    
-                }
-                break;
-            case States.ATTACK:
-                {
-
-                }
-                break;
-            case States.BUILD:
-                {
-
-                }
-                break;
-            case States.MOVE:
-                {
-
-                }
-                break;
-        }
-
-
+        UpdateStates();
     }
 
     public void UpdateStates()
     {
-
+        switch (_currentState)
+        {
+            case States.WATING:
+                {
+                }
+                break;
+            case States.ATTACK:
+                {
+                }
+                break;
+            case States.BUILD:
+                {
+                }
+                break;
+            case States.MOVE:
+                {
+                }
+                break;
+        }
     }
 
     public void Init()
@@ -53,9 +45,11 @@ public class Tower : MonoBehaviour
 
     public void Attack()
     {
-        TowerBase.Attack();
+        TowerBase.  Attack();
     }
 
-
-
+    void OnMouseDown()
+    {
+        UIManager.i.GetPageUIObject<PageGame>().TowerClickEvent(this);
+    }
 }

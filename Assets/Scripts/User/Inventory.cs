@@ -6,7 +6,7 @@ public class Inventory
     private Dictionary<long, Item> _itemDic = new Dictionary<long, Item>();
     private Dictionary<long, Item> _mountingItemDic = new Dictionary<long, Item>();
     private List<TowerBase> _towerList = new List<TowerBase>();
-    public int Money = 10000;
+    public int Money = 411110;
     public int Cash;
 
 
@@ -94,14 +94,33 @@ public class Inventory
         _towerList.Remove(tower);
     }
 
-    public TowerBase FindTower(long uid)
+    public TowerBase GetTower(long uid)
     {
         return _towerList.Find((c) => c.UID == uid);
     }
+    public TowerBase GetTower(int index)
+    {
+        return _towerList.Find((c) => c.LocalIndex == index);
+    }
 
-    public T FindTower<T>(long uid) where T : TowerBase
+    public T GetTower<T>(long uid) where T : TowerBase
     {
         return _towerList.Find((c) => c.UID == uid) as T;
     }
+
+    public List<TowerBase> GetTower<T>() where T : TowerBase
+    {
+       List<TowerBase> tower = _towerList.FindAll((c) => c is T);
+
+        tower.Sort((c, d) =>
+        {
+            if (c.LocalIndex > d.LocalIndex) return 1;
+            else if (c.LocalIndex < d.LocalIndex) return -1;
+            else return 0;
+        });
+
+        return tower;
+    }
+       
 
 }

@@ -12,6 +12,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -28,6 +29,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -44,6 +46,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -60,6 +63,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -76,6 +80,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -92,6 +97,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -108,6 +114,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -124,6 +131,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -140,6 +148,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -156,6 +165,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -172,6 +182,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -188,6 +199,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -204,6 +216,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -220,6 +233,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -236,6 +250,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -252,6 +267,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -268,6 +284,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -284,6 +301,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -300,6 +318,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -316,6 +335,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>2</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -332,6 +352,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -348,6 +369,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -364,6 +386,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -380,6 +403,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -396,6 +420,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -412,6 +437,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -428,6 +454,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -444,6 +471,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -460,6 +488,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -476,6 +505,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>3</FirstSkillIndex>
     <SecondSkillIndex>0</SecondSkillIndex>
     <ThirdSkillIndex>0</ThirdSkillIndex>
@@ -492,6 +522,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -508,6 +539,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -524,6 +556,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -540,6 +573,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -556,6 +590,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -572,6 +607,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -588,6 +624,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -604,6 +641,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -620,6 +658,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -636,6 +675,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -652,6 +692,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -668,6 +709,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -684,6 +726,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -700,6 +743,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -716,6 +760,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -732,6 +777,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -748,6 +794,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -764,6 +811,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -780,6 +828,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -796,6 +845,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -812,6 +862,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -828,6 +879,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -844,6 +896,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -860,6 +913,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -876,6 +930,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -892,6 +947,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -908,6 +964,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -924,6 +981,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -940,6 +998,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -956,6 +1015,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -972,6 +1032,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -988,6 +1049,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1004,6 +1066,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1020,6 +1083,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1036,6 +1100,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1052,6 +1117,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1068,6 +1134,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1084,6 +1151,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1100,6 +1168,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1116,6 +1185,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>30</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1132,6 +1202,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1148,6 +1219,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1164,6 +1236,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1180,6 +1253,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1196,6 +1270,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1212,6 +1287,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1228,6 +1304,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1244,6 +1321,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1260,6 +1338,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1276,6 +1355,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
+    <GameCost>50</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1292,6 +1372,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1308,6 +1389,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>200</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1324,6 +1406,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>300</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1340,6 +1423,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>400</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1356,6 +1440,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>500</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1372,6 +1457,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>600</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1388,6 +1474,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>700</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1404,6 +1491,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>800</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1420,6 +1508,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>900</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>
@@ -1436,486 +1525,7 @@
     <AtkRange>500</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>301</Index>
-    <LocalIndex>301</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>1</Level>
-    <AtkPower>24</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>100</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>302</Index>
-    <LocalIndex>302</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>2</Level>
-    <AtkPower>36</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>200</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>303</Index>
-    <LocalIndex>303</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>3</Level>
-    <AtkPower>48</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>300</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>304</Index>
-    <LocalIndex>304</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>4</Level>
-    <AtkPower>60</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>400</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>305</Index>
-    <LocalIndex>305</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>5</Level>
-    <AtkPower>72</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>500</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>306</Index>
-    <LocalIndex>306</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>6</Level>
-    <AtkPower>84</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>600</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>307</Index>
-    <LocalIndex>307</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>7</Level>
-    <AtkPower>96</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>700</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>308</Index>
-    <LocalIndex>308</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>8</Level>
-    <AtkPower>108</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>800</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>309</Index>
-    <LocalIndex>309</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>9</Level>
-    <AtkPower>120</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>900</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>310</Index>
-    <LocalIndex>310</LocalIndex>
-    <Name>소나</Name>
-    <Species>Buf</Species>
-    <Rank>F</Rank>
-    <Level>10</Level>
-    <AtkPower>132</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>311</Index>
-    <LocalIndex>311</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>1</Level>
-    <AtkPower>24</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>100</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>312</Index>
-    <LocalIndex>312</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>2</Level>
-    <AtkPower>36</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>200</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>313</Index>
-    <LocalIndex>313</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>3</Level>
-    <AtkPower>48</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>300</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>314</Index>
-    <LocalIndex>314</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>4</Level>
-    <AtkPower>60</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>400</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>315</Index>
-    <LocalIndex>315</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>5</Level>
-    <AtkPower>72</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>500</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>316</Index>
-    <LocalIndex>316</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>6</Level>
-    <AtkPower>84</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>600</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>317</Index>
-    <LocalIndex>317</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>7</Level>
-    <AtkPower>96</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>700</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>318</Index>
-    <LocalIndex>318</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>8</Level>
-    <AtkPower>108</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>800</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>319</Index>
-    <LocalIndex>319</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>9</Level>
-    <AtkPower>120</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>900</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>320</Index>
-    <LocalIndex>320</LocalIndex>
-    <Name>카르마</Name>
-    <Species>Buf</Species>
-    <Rank>E</Rank>
-    <Level>10</Level>
-    <AtkPower>132</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>1000</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>321</Index>
-    <LocalIndex>321</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>1</Level>
-    <AtkPower>24</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>100</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>322</Index>
-    <LocalIndex>322</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>2</Level>
-    <AtkPower>36</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>200</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>323</Index>
-    <LocalIndex>323</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>3</Level>
-    <AtkPower>48</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>300</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>324</Index>
-    <LocalIndex>324</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>4</Level>
-    <AtkPower>60</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>400</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>325</Index>
-    <LocalIndex>325</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>5</Level>
-    <AtkPower>72</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>500</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>326</Index>
-    <LocalIndex>326</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>6</Level>
-    <AtkPower>84</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>600</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>327</Index>
-    <LocalIndex>327</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>7</Level>
-    <AtkPower>96</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>700</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>328</Index>
-    <LocalIndex>328</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>8</Level>
-    <AtkPower>108</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>800</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>329</Index>
-    <LocalIndex>329</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>9</Level>
-    <AtkPower>120</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>900</Cost>
-    <FirstSkillIndex>1</FirstSkillIndex>
-    <SecondSkillIndex>1</SecondSkillIndex>
-    <ThirdSkillIndex>2</ThirdSkillIndex>
-  </xml_node>
-  <xml_node>
-    <Index>330</Index>
-    <LocalIndex>330</LocalIndex>
-    <Name>룰루</Name>
-    <Species>Buf</Species>
-    <Rank>D</Rank>
-    <Level>10</Level>
-    <AtkPower>132</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
-    <MoveSpeed>250</MoveSpeed>
-    <Cost>1000</Cost>
+    <GameCost>80</GameCost>
     <FirstSkillIndex>1</FirstSkillIndex>
     <SecondSkillIndex>1</SecondSkillIndex>
     <ThirdSkillIndex>2</ThirdSkillIndex>

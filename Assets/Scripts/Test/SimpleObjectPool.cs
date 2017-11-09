@@ -85,7 +85,7 @@ public class SimpleObjectPool : MonoBehaviour
     /// <param name="summonPos"></param>
     /// <param name="summonQuat"></param>
     /// <returns></returns>
-    public static GameObject SpawnPoolObject(GameObject prefab, Vector3 summonPos, Quaternion summonQuat)
+    public static GameObject SpawnPoolObject(GameObject prefab, Vector3 summonPos, Quaternion summonQuat, Transform parent =null)
     {
         if (instance == null)
             Initialize();
@@ -121,7 +121,7 @@ public class SimpleObjectPool : MonoBehaviour
                 return obj;
             }
 
-            obj = Instantiate(prefab) as GameObject;
+            obj = Instantiate(prefab, parent) as GameObject;
             trans = obj.transform;
             trans.SetParent(null,false);
             trans.position = summonPos;
@@ -134,7 +134,7 @@ public class SimpleObjectPool : MonoBehaviour
         }
         else // 만약 풀에 없는 오브젝트면 
         {
-            obj = Instantiate(prefab) as GameObject;
+            obj = Instantiate(prefab, parent) as GameObject;
             trans = obj.transform;
             trans.SetParent(null,false);
             trans.position = summonPos;

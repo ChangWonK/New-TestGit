@@ -6,7 +6,6 @@ public enum POPUP_TYPE { PAGE = 0, STACK, POPUP, FRONT }
 
 public class UIManager : MonoBehaviour
 {
-
     private static UIManager _instance = null;
     public static UIManager i
     {
@@ -69,6 +68,10 @@ public class UIManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             RemoveTopUIObject();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            CreatePopup<PageMain>(POPUP_TYPE.PAGE);
         }
     }
 
@@ -168,8 +171,6 @@ public class UIManager : MonoBehaviour
 
     public void RemovePopupUIObject<T>() where T : UIPopupBase
     {
-
-
         T obj = _popupList.Find((c) => c is T) as T;
 
         if (obj == null)
@@ -181,7 +182,6 @@ public class UIManager : MonoBehaviour
 
     public void RemoveTopPopupUIObject()
     {
-
         if (_popupList.Count > 0)
         {
             var lastPop = _popupList.FindLast((c) => c);
