@@ -12,19 +12,25 @@ public class PageGame : UIPopupBase
     private GameObject _contentParent;
     private GameObject _towerKindParent;
     private GameObject _towerRealatedParent;
-    private GameObject _towerPrefab;    
+    private GameObject _enemyRealatedParent;
+    private GameObject _towerPrefab;  
+    private GameObject _enemyPrefab;
 
     private Transform _towerParent;
+    private Transform _enemyParent;
 
     private Text _modeTxt;
     private Text _stageTxt;
     private Text _moneyTxt;
 
     private int _towerMaxCount = 5;
+    private int _currentGameLevel = 1;
 
     void Awake()
     {
         _towerPrefab = Resources.Load<GameObject>(Utility.TowerPrefabPath);
+        _enemyPrefab = Resources.Load<GameObject>(Utility.EnemyPrefabPath);
+
         _towerInfo = GetComponentInChildren<GameTowerInformation>();
 
         Transform textTrans = transform.Find("Text");
@@ -33,21 +39,24 @@ public class PageGame : UIPopupBase
         _moneyTxt = GetText("Txt_Money");
 
         _towerParent = GameObject.Find("TowerList").transform;
+        _enemyParent = GameObject.Find("EnemyList").transform;
+
         _contentParent = transform.Find("TowerContent").gameObject;
-        _towerKindParent = transform.Find("TowerKindButton").gameObject;
-        _towerRealatedParent = transform.Find("TowerRealatedButton").gameObject;
+        _towerKindParent = transform.Find("Button").GetChild(0).gameObject;
+        _towerRealatedParent = transform.Find("Button").GetChild(1).gameObject;
+        _enemyRealatedParent = transform.Find("Button").GetChild(2).gameObject;
 
         RegistAllButtonOnClickEvent();
     }
     void Start ()
     {
         _modeTxt.text = GameManager.i.GameMode.ToString();
-        _stageTxt.text = GameManager.i.GameStage.ToString() + " - " + GameManager.i.GameMap.ToString();
+        _stageTxt.text = GameManager.i.GameStageLevel.ToString() + " - " + GameManager.i.GameMapLevel.ToString();
         ActiveBtnParent(true, false, false);
         _towerInfo.gameObject.SetActive(false);
 
         //////////////test///////////
-        //UnitManager.i.UITowerBuy<HumanTower>(1);
+        UnitManager.i.UITowerBuy<HumanTower>(1);
         //UnitManager.i.UITowerBuy<HumanTower>(21);
         //UnitManager.i.UITowerBuy<HumanTower>(11);
         //////////////test///////////
@@ -77,6 +86,19 @@ public class PageGame : UIPopupBase
         ActiveBtnParent(false, false, true);
     }
 
+    private void SpawnEnemy<T>() where T : EnemyBase
+    {
+        int hundreds = GameManager.i.GameStageLevel * 100;
+        int tens = GameManager.i.GameMapLevel * 10;
+        int units = _currentGameLevel;
+
+        int sumIndex = hundreds + tens + units;
+
+        Vector3 pos = TempPoss();
+
+        SpawnManager.i.CreateEnemy<T>(_enemyPrefab, pos, sumIndex, _enemyParent);
+    }
+
     private void UpgradeTowerButton()
     {
         Debug.Log("Upgrade");
@@ -102,7 +124,19 @@ public class PageGame : UIPopupBase
             _towerInfo.gameObject.SetActive(false);
     }
 
-    float posX = 0;
+    Vector3 towerPos;
+    Vector3 enemyPos;
+    private Vector3 TempPos()
+    {
+        towerPos += new Vector3(1, 0, 0);
+        return towerPos;
+    }
+    private Vector3 TempPoss()
+    {
+        enemyPos -= new Vector3(1, 0, 0);
+        return enemyPos;
+    }
+
     private void ContentClickEvent<T>(int index) where T : TowerBase, new()
     {
         int haveMoney = UserInformation.i.Character.GetGameMoney();
@@ -113,10 +147,8 @@ public class PageGame : UIPopupBase
             UIManager.i.CreatePopup<PopupWarning>(POPUP_TYPE.POPUP);
             return;
         }
-
-        var tower = SpawnManager.i.CreateTower<T>(_towerPrefab, index, _towerParent);
-        tower.transform.position = new Vector3(posX, 0);
-        posX+= 2;
+        Vector3 pos = TempPos();
+        var tower = SpawnManager.i.CreateTower<T>(_towerPrefab, pos, index, _towerParent);
         ResetUIUpdata();
         ActiveBtnParent(true, false, false);
     }
@@ -167,6 +199,10 @@ public class PageGame : UIPopupBase
         if( name == "Btn_Return")
         {
             ActiveBtnParent(true, false, false);
+        }
+        if(name == "Btn_Enemy")
+        {
+            SpawnEnemy<HumanEnemy>();
         }
     }
 }

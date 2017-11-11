@@ -37,6 +37,8 @@ public class Utility : SingleTone<Utility>
     public const string BuyQuestion = "구입을 진행하시겠습니까?";
 
     public const string TowerPrefabPath = "Prefabs/3DObject/Tower/TowerPrefab";
+    public const string EnemyPrefabPath = "Prefabs/3DObject/Enemy/EnemyPrefab";
+
 
 
 

@@ -7,21 +7,21 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     public GameMode GameMode;
     [HideInInspector]
-    public int GameStage;
+    public int GameStageLevel;
     [HideInInspector]
-    public int GameMap;
+    public int GameMapLevel;
 
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        var pop = UIManager.i.CreatePopup<FadeInOut>(POPUP_TYPE.FRONT);
+       // var pop = UIManager.i.CreatePopup<FadeInOut>(POPUP_TYPE.FRONT);
     }
 
     void Start()
     {
         TableManager.i.DataTableLoad();
 
-        ChangeScene(SCENE_NAME.LOGO_SCENE, IntroSceneExitWaiting, LogoScenePrepareWaiting);
+        //ChangeScene(SCENE_NAME.LOGO_SCENE, IntroSceneExitWaiting, LogoScenePrepareWaiting);
     }
 
     //******************** Scene **********************//

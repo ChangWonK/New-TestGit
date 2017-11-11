@@ -85,7 +85,7 @@ public class SimpleObjectPool : MonoBehaviour
     /// <param name="summonPos"></param>
     /// <param name="summonQuat"></param>
     /// <returns></returns>
-    public static GameObject SpawnPoolObject(GameObject prefab, Vector3 summonPos, Quaternion summonQuat, Transform parent =null)
+    public static GameObject SpawnPoolObject(GameObject prefab, Vector3 summonPos, Quaternion summonQuat, Transform parent)
     {
         if (instance == null)
             Initialize();
@@ -186,10 +186,10 @@ public class SimpleObjectPool : MonoBehaviour
 
 public static class ObjectPoolExtensions
 {
-    public static GameObject SpwanObject<T>(this T obj, Vector3 pos, Quaternion quat) where T : Component
-    {
-        return SimpleObjectPool.SpawnPoolObject(obj.gameObject, pos, quat);
-    }
+    //public static GameObject SpwanObject<T>(this T obj, Vector3 pos, Quaternion quat) where T : Component
+    //{
+    //   // return SimpleObjectPool.SpawnPoolObject(obj.gameObject, pos, quat);
+    //}
 
 
     public static void Recycle(this GameObject obj)

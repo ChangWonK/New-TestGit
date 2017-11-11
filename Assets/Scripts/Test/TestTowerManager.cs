@@ -10,26 +10,26 @@ public class TestTowerManager : MonoSingleton<TestTowerManager>
     private Dictionary<long, TestTowerBase> _liveTowerInfoList = new Dictionary<long, TestTowerBase>();
 
 
-    public T CreateTower<T>(GameObject res, Vector3 pos, Quaternion rot) where T : TestTowerBase
-    {
-        GameObject spwObj = SimpleObjectPool.SpawnPoolObject(res, pos, rot);
+    //public T CreateTower<T>(GameObject res, Vector3 pos, Quaternion rot) where T : TestTowerBase
+    //{
+    //    GameObject spwObj = SimpleObjectPool.SpawnPoolObject(res, pos, rot);
 
-        T tower = spwObj.GetComponent<T>();        
+    //    T tower = spwObj.GetComponent<T>();        
 
-        if (tower == null)
-            tower = spwObj.AddComponent<T>();
+    //    if (tower == null)
+    //        tower = spwObj.AddComponent<T>();
         
-        tower.UID = GetNextUID();
+    //    tower.UID = GetNextUID();
 
-        if (_liveTowerList.ContainsKey(tower.UID) == false)
-        {
-            _liveTowerList.Add(tower.UID , spwObj);
-            _liveTowerInfoList.Add(tower.UID , tower);
-        }
+    //    if (_liveTowerList.ContainsKey(tower.UID) == false)
+    //    {
+    //        _liveTowerList.Add(tower.UID , spwObj);
+    //        _liveTowerInfoList.Add(tower.UID , tower);
+    //    }
 
 
-        return tower as T;
-    }
+    //    return tower as T;
+    //}
 
     public void RemoveTower(GameObject targetTower)
     {

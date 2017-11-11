@@ -18,10 +18,9 @@ public class MagicTower : TowerBase
         MoveSpeed += UserInformation.i.Character.GetMagicMoveSpeed() * MoveSpeed;
     }
 
-    public override float Attack()
+    public override void Attack(EnemyBase enemy)
     {
-        Debug.Log("magic atk : " + AtkPower);
-        return AtkPower;
+        enemy.Hurt(AtkPower);
     }
 
     public override void Destroy()

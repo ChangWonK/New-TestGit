@@ -6,9 +6,9 @@ public class SpawnManager : Singleton<SpawnManager>
     private List<GameObject> _towerList = new List<GameObject>();
     private List<GameObject> _enemyList = new List<GameObject>();
 
-    public Tower CreateTower<T>(GameObject towerPrefab, int index, Transform parent) where T : TowerBase, new()
+    public Tower CreateTower<T>(GameObject towerPrefab, Vector3 pos, int index, Transform parent) where T : TowerBase, new()
     {
-        towerPrefab = SimpleObjectPool.SpawnPoolObject(towerPrefab, Vector3.zero, Quaternion.identity, parent);
+        towerPrefab = SimpleObjectPool.SpawnPoolObject(towerPrefab, pos, Quaternion.identity, parent);
 
         Tower tower = towerPrefab.GetComponent<Tower>();
 
@@ -36,5 +36,60 @@ public class SpawnManager : Singleton<SpawnManager>
 
         return towerObject.GetComponent<Tower>();
     }
+
+    public EnemyBase CreateEnemy<T>(GameObject enemyPrefab, Vector3 pos, int index, Transform parent) where T : EnemyBase
+    {
+        enemyPrefab = SimpleObjectPool.SpawnPoolObject(enemyPrefab, pos, Quaternion.identity, parent);
+
+        T enemy =  enemyPrefab.AddComponent<T>();
+        enemy.Init(index);
+
+        _enemyList.Add(enemyPrefab);
+        return enemy;
+    }
+
+    public GameObject GetFirstEnemy()
+    {
+        if (_enemyList.Count < 1)
+            return null;
+
+        return _enemyList[0];
+    }
+
+    public List<GameObject> GetEnemyList()
+    {
+        return _enemyList;
+    }
+
+    public GameObject GetCloseEnemyList(Transform trans)
+    {   
+        float lastlegth = 0;
+        int findIndex = 0;
+
+        if (_enemyList.Count < 1) return null;
+        for(int i = 0; i < _enemyList.Count; i++)
+        {
+            float length = Vector3.SqrMagnitude(_enemyList[i].transform.position - trans.position);
+
+            if (i == 0)
+            {
+                lastlegth = length;
+                findIndex = 0;
+                continue;
+            }
+
+            if (length < lastlegth)
+            {
+                findIndex = i;
+                lastlegth = length;
+            }            
+        }
+
+        return _enemyList[findIndex];
+
+    }
+
+
+
 
 }

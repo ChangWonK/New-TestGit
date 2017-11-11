@@ -67,7 +67,10 @@ public class UnitManager : Singleton<UnitManager>
     {
         if (upgradeItem.Level >= 10) return null;
 
-        UserInformation.i.Inventory.RemoveItem(consumableItem.UID);
+        Inventory inven = UserInformation.i.Inventory;
+
+
+        inven.RemoveItem(consumableItem.UID);
 
         int ranNum = Random.Range(1, 101);
         int compareNum = 100 - probabilityNum;
@@ -78,16 +81,16 @@ public class UnitManager : Singleton<UnitManager>
 
             Item ee = new Item(nextLevel, Utility.i.GetNextUID());
 
-            UserInformation.i.Inventory.AddItem(ee);
+            inven.AddItem(ee);
 
-            Item newItem = UserInformation.i.Inventory.FindItem(Utility.i.ItemUID);
+            Item newItem = inven.FindItem(Utility.i.ItemUID);
 
-            if (UserInformation.i.Inventory.FindMountingItem(upgradeItem.UID) != null)
+            if (inven.FindMountingItem(upgradeItem.UID) != null)
             {
-                UserInformation.i.Inventory.AddMountingItem(newItem.UID, newItem);
+                inven.AddMountingItem(newItem.UID, newItem);
             }
 
-            UserInformation.i.Inventory.RemoveItem(upgradeItem.UID);
+            inven.RemoveItem(upgradeItem.UID);
 
             return newItem;
         }

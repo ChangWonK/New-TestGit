@@ -47,8 +47,8 @@ public class StackMapSelect : UIPopupBase
     private void StageSceneExitWaiting()
     {
         GameManager.i.GameMode = _gameMode;
-        GameManager.i.GameStage = _stageLevel;
-        GameManager.i.GameMap = _mapLevel;
+        GameManager.i.GameStageLevel = _stageLevel;
+        GameManager.i.GameMapLevel = _mapLevel;
 
         UIManager.i.RemoveStackUIObject<StackMapSelect>();
         UIManager.i.RemovePageUIObject();

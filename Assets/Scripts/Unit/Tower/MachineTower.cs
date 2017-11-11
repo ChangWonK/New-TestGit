@@ -12,10 +12,9 @@ public class MachineTower : TowerBase
         MoveSpeed += UserInformation.i.Character.GetMachineMoveSpeed() * MoveSpeed;
     }
 
-    public override float Attack()
+    public override void Attack(EnemyBase enemy)
     {
-        Debug.Log("Machine AttackPower : " + AtkPower);
-        return AtkPower;
+        enemy.Hurt(AtkPower);
     }
 
     public override void Destroy()

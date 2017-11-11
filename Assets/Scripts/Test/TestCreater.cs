@@ -27,7 +27,7 @@ public class TestCreater : MonoBehaviour
     {
         if(GUI.Button(new Rect(0,0,100,100), "Tower Make"))
         {
-            TestTowerManager.i.CreateTower<ManTower>(_towerRes,_spwanPos,Quaternion.identity);
+           // TestTowerManager.i.CreateTower<ManTower>(_towerRes,_spwanPos,Quaternion.identity);
             AddCurrentpos();
         }
 

@@ -13,10 +13,9 @@ public class HumanTower : TowerBase
         MoveSpeed += UserInformation.i.Character.GetHumanMoveSpeed() * MoveSpeed;
     }
 
-    public override float Attack()
+    public override void Attack(EnemyBase enemy)
     {
-        Debug.Log("Human AttackPower : " + AtkPower);
-        return AtkPower;
+        enemy.Hurt(AtkPower);
     }
 
     public override void Destroy()

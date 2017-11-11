@@ -8,8 +8,8 @@
     <Rank>F</Rank>
     <Level>1</Level>
     <AtkPower>100</AtkPower>
-    <AtkSpeed>0.5</AtkSpeed>
-    <AtkRange>500</AtkRange>
+    <AtkSpeed>5</AtkSpeed>
+    <AtkRange>2</AtkRange>
     <MoveSpeed>250</MoveSpeed>
     <Cost>100</Cost>
     <GameCost>30</GameCost>

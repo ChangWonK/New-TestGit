@@ -141,3 +141,37 @@ public class SkillData : Table<SkillData>, ITableRow
 
     }
 }
+
+public class EnemyData : Table<EnemyData>, ITableRow
+{
+    public const string PrefabPath = "Prefabs/UI/ScrollItem/TowerContent";
+
+    public int LocalIndex;
+    public int StageLevel;
+    public int MapLevel;
+    public int GameLevel;
+    public int Life;
+    public int Armor;
+    public float MoveSpeed;
+    public int GetMoney;
+
+    public int ID
+    {
+        get
+        {
+            return LocalIndex;
+        }
+    }
+
+    public void Parse(XmlNode node)
+    {
+        LocalIndex = node.GetInt("LocalIndex");
+        StageLevel = node.GetInt("StageLevel");
+        MapLevel = node.GetInt("MapLevel");
+        GameLevel = node.GetInt("GameLevel");
+        Life = node.GetInt("Life");
+        Armor = node.GetInt("Armor");
+        MoveSpeed = node.GetInt("MoveSpeed");
+        GetMoney = node.GetInt("GetMoney");
+    }
+}

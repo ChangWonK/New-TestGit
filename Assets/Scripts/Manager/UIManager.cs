@@ -71,7 +71,7 @@ public class UIManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            CreatePopup<PageMain>(POPUP_TYPE.PAGE);
+            CreatePopup<PageGame>(POPUP_TYPE.PAGE);
         }
     }
 

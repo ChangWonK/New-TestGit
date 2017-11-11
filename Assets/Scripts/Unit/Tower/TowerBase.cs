@@ -48,7 +48,7 @@ public abstract class TowerBase
 
     public abstract void SetAility();
 
-    public abstract float Attack();
+    public abstract void Attack(EnemyBase enemy);
 
     public abstract void Destroy();
 

@@ -17,7 +17,7 @@ public class TableManager : SingleTone<TableManager>
         TableList.Add(typeof(TowerData), Add<TowerData>());
         TableList.Add(typeof(ItemData), Add<ItemData>());
         TableList.Add(typeof(SkillData), Add<SkillData>());
-
+        TableList.Add(typeof(EnemyData), Add<EnemyData>());
         _init = true;
     }
 
