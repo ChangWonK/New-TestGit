@@ -56,6 +56,10 @@ public class TestTowerManager : MonoSingleton<TestTowerManager>
         return temp;        
     }   
 
+    public void dd()
+    {
+
+    }
 
 
     private long GetNextUID()

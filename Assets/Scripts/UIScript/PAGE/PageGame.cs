@@ -56,7 +56,7 @@ public class PageGame : UIPopupBase
         _towerInfo.gameObject.SetActive(false);
 
         //////////////test///////////
-        UnitManager.i.UITowerBuy<HumanTower>(1);
+        UnitManager.i.UITowerBuy<MoveTower>(1);
         //UnitManager.i.UITowerBuy<HumanTower>(21);
         //UnitManager.i.UITowerBuy<HumanTower>(11);
         //////////////test///////////
@@ -69,7 +69,7 @@ public class PageGame : UIPopupBase
 
         ResetUIUpdata();
     }
-    private void CreateContent<T>() where T : TowerBase, new()
+    private void CreateContent<T>() where T : TowerBase
     {
         List<TowerBase> tower = UserInformation.i.Inventory.GetTower<T>();
 
@@ -137,7 +137,7 @@ public class PageGame : UIPopupBase
         return enemyPos;
     }
 
-    private void ContentClickEvent<T>(int index) where T : TowerBase, new()
+    private void ContentClickEvent<T>(int index) where T : TowerBase
     {
         int haveMoney = UserInformation.i.Character.GetGameMoney();
         int Cost = UserInformation.i.Inventory.GetTower(index).Cost;
@@ -174,7 +174,7 @@ public class PageGame : UIPopupBase
 
         if (name == "Btn_Human")
         {
-            CreateContent<HumanTower>();
+            CreateContent<MoveTower>();
         }
         if (name == "Btn_Machine")
         {

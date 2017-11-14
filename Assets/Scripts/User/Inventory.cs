@@ -8,7 +8,7 @@ public class Inventory
     private List<TowerBase> _towerList = new List<TowerBase>();
     public int Money = 411110;
     public int Cash;
-
+    private string _toMountItemKind;
 
     public void AddItem(Item item)
     {
@@ -23,7 +23,7 @@ public class Inventory
         _itemDic.Remove(uid);
     }
 
-    public Item FindItem(long uid)
+    public Item GetItem(long uid)
     {
         return _itemDic[uid];
     }
@@ -47,11 +47,6 @@ public class Inventory
         }
 
         return returnItemList;
-    }
-
-    public Dictionary<long, Item>.Enumerator GetEnumerItemDic()
-    {
-        return _itemDic.GetEnumerator();
     }
 
     public void AddMountingItem(long uid, Item item)
@@ -78,6 +73,42 @@ public class Inventory
 
         return null;
     }
+    string findItemKindStr;
+    public long GetCheckMountItemUID(long uid)
+    {
+        int ringCount = 0;
+        long returnValue = 0;
+        _toMountItemKind = _itemDic[uid].Kind;
+
+        var erator = _mountingItemDic.GetEnumerator();
+
+        while (erator.MoveNext())
+        {
+            var pair = erator.Current;
+
+            findItemKindStr = _mountingItemDic[pair.Key].Kind;
+
+            if(_toMountItemKind == findItemKindStr)
+            {
+                returnValue = pair.Key;
+                if(findItemKindStr == "Ring")
+                {
+                    ringCount++;
+                }
+            }
+        }
+
+        if(_toMountItemKind == "Ring")
+        {
+            if (ringCount < 2)
+                returnValue = 0;
+        }
+
+
+        return returnValue;
+    }
+
+   
 
     public Dictionary<long, Item>.Enumerator GetEnumerMountingItemDic()
     {

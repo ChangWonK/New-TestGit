@@ -52,7 +52,6 @@ public class SceneManager : Singleton<SceneManager>
 
     private IEnumerator LoadScene(SCENE_NAME sceneEnum)
     {
-
         var progress = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync((int)sceneEnum);
 
         while (progress.isDone == false)

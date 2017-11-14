@@ -4,49 +4,55 @@ using UnityEngine;
 
 public class TestCode : MonoBehaviour
 {
-    //private GameObject _prefab;
-    //public Tower test;
+    public GameObject TestObject;
 
-    //private GameObject _testPrefab;
-    //private List<GameObject> _list = new List<GameObject>();
+    public List<TestTower> _towerList = new List<TestTower>();
 
-    //void Start()
-    //{
-    //    _prefab = Resources.Load<GameObject>("Prefabs/3DObject/Tower/TowerPrefab");
-    //}
 
-    
+    public void ddd(TestTower tower)
+    {
+        tower.move();
+    }
 
-    //void OnGUI()
-    //{
-    //    if (GUI.Button(new Rect(0, 0, 100, 100), "human ADD"))
-    //    {
-            
-    //       GameObject newObject = test.SpwanObject(Vector3.zero, Quaternion.identity);
-    //        _list.Add(newObject);
-    //    }
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(0, 0, 100, 100), "human ADD"))
+        {
+            GameObject newObject =  Instantiate(TestObject);
+            GameObject nexwObject = Instantiate(TestObject);
 
-    //    if (GUI.Button(new Rect(0, 200, 100, 100), "machine ADD"))
-    //    {
-    //        _list[0].Recycle();
-    //        _list.RemoveAt(0);
-    //    }
+            newObject.AddComponent<Vayne>();
+            nexwObject.AddComponent<Zealot>();
 
-    //    if (GUI.Button(new Rect(0, 400, 100, 100), "human Remove"))
-    //    {
-    //        Debug.Log(_list.Count);
-    //    }
+            _towerList.Add(newObject.GetComponent<TestTower>());
+            _towerList.Add(nexwObject.GetComponent<TestTower>());
 
-    //    if (GUI.Button(new Rect(0, 600, 100, 100), "machine Remove"))
-    //    {
-    //    }
 
-    //    if (GUI.Button(new Rect(1180, 000, 100, 100), "human Attack"))
-    //    {
-    //    }
-    //    if (GUI.Button(new Rect(1180, 200, 100, 100), "machine Attack"))
-    //    {
-    //    }
+        }
 
-    //}
+        if (GUI.Button(new Rect(0, 200, 100, 100), "machine ADD"))
+        {
+            _towerList[0].Attack();
+        }
+
+        if (GUI.Button(new Rect(0, 400, 100, 100), "human Remove"))
+        {
+            ddd(_towerList[0]);
+
+        }
+
+        if (GUI.Button(new Rect(0, 600, 100, 100), "machine Remove"))
+        {
+            ddd(_towerList[1]);
+        }
+
+
+        if (GUI.Button(new Rect(1180, 000, 100, 100), "human Attack"))
+        {
+        }
+        if (GUI.Button(new Rect(1180, 200, 100, 100), "machine Attack"))
+        {
+        }
+
+    }
 }

@@ -3,62 +3,80 @@ using System.Collections.Generic;
 
 public class UnitManager : Singleton<UnitManager>
 {
-    private bool _isMountingRing = false;
-    private string _kindItem = "";
-
-    public Item ItemBuy(int index)
+    public bool ItemBuy(int index, int money)
     {
-        Item newItem = new Item(index);
+        int cost =  TableManager.i.GetTable<ItemData>(index).Cost;
 
-        return newItem;
-    }
-
-    public void ItemSell()
-    {
-        UIManager.i.RemoveTopStackUIObject();
-        UIManager.i.GetPageUIObject<PageMain>().ResetUIUpdata();
-    }
-
-    public void ItemMounting(long uID)
-    {
-        Inventory inven = UserInformation.i.Inventory;
-        _kindItem = inven.FindItem(uID).Kind;
-
-        var enumeratorItemDic = inven.GetEnumerMountingItemDic();
-
-        string findKindItem;
-        while (enumeratorItemDic.MoveNext())
+        if(cost > money)
         {
-            var pair = enumeratorItemDic.Current;
-            findKindItem = inven.FindMountingItem(pair.Key).Kind;
-
-            if (findKindItem == _kindItem)
-            {
-                if (findKindItem != "Ring")
-                {
-                    inven.RemoveMountingItem(pair.Key);
-                }
-                else if (findKindItem == "Ring")
-                {
-                    if(_isMountingRing)
-                    {
-                        inven.RemoveMountingItem(pair.Key);
-                    }
-                    else
-                    {
-                        _isMountingRing = true;
-                    }
-                }
-                break;
-            }
+            return false;
         }
-        UserInformation.i.Inventory.AddMountingItem(uID, inven.FindItem(uID));
+
+        Item newItem = CreateNewItem(index);
+
+        newItem.UID = Utility.i.GetNextUID();
+        UserInformation.i.Inventory.Money -= newItem.Cost;
+        UserInformation.i.Inventory.AddItem(newItem);
+
+        return true;
     }
-    
-    public void ItemRealease(long uID)
+
+    public void ItemSell(long uid)
     {
-        if(UserInformation.i.Inventory.FindMountingItem(uID).Kind == "Ring")
-            _isMountingRing = false;
+        float invenCost = UserInformation.i.Inventory.GetItem(uid).Cost;
+        invenCost *= 0.5f;
+
+        UserInformation.i.Inventory.Money += (int)invenCost;
+        UserInformation.i.Inventory.RemoveItem(uid);
+    }
+
+    public void MountItem(long uID)
+    {
+        var item = UserInformation.i.Inventory.GetItem(uID);
+
+        UserInformation.i.Inventory.AddMountingItem(uID, item);
+    }
+
+    //public void ToMountingItem(long uID)
+    //{
+    //    Inventory inven = UserInformation.i.Inventory;
+    //    _kindItem = inven.GetItem(uID).Kind;
+
+    //    var enumeratorItemDic = inven.GetEnumerMountingItemDic();
+
+    //    string findKindItem;
+    //    while (enumeratorItemDic.MoveNext())
+    //    {
+    //        var pair = enumeratorItemDic.Current;
+    //        findKindItem = inven.FindMountingItem(pair.Key).Kind;
+
+    //        if (findKindItem == _kindItem)
+    //        {
+    //            if (findKindItem != "Ring")
+    //            {
+    //                inven.RemoveMountingItem(pair.Key);
+    //            }
+    //            else if (findKindItem == "Ring")
+    //            {
+    //                if(_isMountingRing)
+    //                {
+    //                    inven.RemoveMountingItem(pair.Key);
+    //                }
+    //                else
+    //                {
+    //                    _isMountingRing = true;
+    //                }
+    //            }
+    //            break;
+    //        }
+    //    }
+    //    UserInformation.i.Inventory.AddMountingItem(uID, inven.GetItem(uID));
+    //}
+
+    public void RealeaseItem(long uID)
+    {
+        if (uID == 0) return;
+        var findItem = UserInformation.i.Inventory.FindMountingItem(uID);
 
         UserInformation.i.Inventory.RemoveMountingItem(uID);
     }
@@ -68,7 +86,6 @@ public class UnitManager : Singleton<UnitManager>
         if (upgradeItem.Level >= 10) return null;
 
         Inventory inven = UserInformation.i.Inventory;
-
 
         inven.RemoveItem(consumableItem.UID);
 
@@ -83,7 +100,7 @@ public class UnitManager : Singleton<UnitManager>
 
             inven.AddItem(ee);
 
-            Item newItem = inven.FindItem(Utility.i.ItemUID);
+            Item newItem = inven.GetItem(Utility.i.ItemUID);
 
             if (inven.FindMountingItem(upgradeItem.UID) != null)
             {
@@ -101,11 +118,13 @@ public class UnitManager : Singleton<UnitManager>
         }
     }
 
-    public void UITowerBuy<T>(int index) where T : TowerBase, new()
+    public void UITowerBuy<T>(int index) where T : TowerBase
     {
-        T newTower = new T();
+        GameObject tempObject = new GameObject();
 
-        newTower.Init(index);
+        T newTower = tempObject.AddComponent<T>();
+
+        newTower.LocalIndex = index;
 
             UserInformation.i.Inventory.AddTower(newTower);
     }
@@ -116,12 +135,17 @@ public class UnitManager : Singleton<UnitManager>
 
         int nextIndex = tower.LocalIndex++;
 
-        tower.Init(nextIndex);
+        tower.LocalIndex = nextIndex;
 
         return tower.LocalIndex;
     }
 
 
+    private Item CreateNewItem(int index)
+    {
+        Item newItem = new Item(index);
 
+        return newItem;
+    }
 
 }

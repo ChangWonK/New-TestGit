@@ -47,7 +47,7 @@ public class StackUpgradePanel : UIPopupBase
         _realeaseBtn.interactable = false;
         _probabilityTxt = GetText("Txt_Probability");
         _costTxt = GetText("Txt_Cost");
-        _upgradeItem = UserInformation.i.Inventory.FindItem(GetUpgradeItemUID);
+        _upgradeItem = UserInformation.i.Inventory.GetItem(GetUpgradeItemUID);
 
         InitContent();
         CreateContent();

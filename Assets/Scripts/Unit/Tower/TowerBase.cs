@@ -1,7 +1,19 @@
 ﻿using UnityEngine;
 
-public abstract class TowerBase 
+public abstract class TowerBase : MonoBehaviour
 {
+    public enum States { WATING = 0, IDLE, MOVE, ATTACK }
+
+    private States _currentState = States.IDLE;
+
+    public States CurrentState
+    {
+        set
+        {
+            _currentState = value;
+        }
+    }
+
     public long UID;
     public int LocalIndex;
     public string Name;
@@ -20,19 +32,14 @@ public abstract class TowerBase
     public int SecondSkillIndex;
     public int ThirdSkillIndex;
 
-
-    public void Init(int index)
+    void Start()
     {
-        var table = TableManager.i.GetTable<TowerData>(index);
+        var table = TableManager.i.GetTable<TowerData>(LocalIndex);
+        UID = (LocalIndex + 11) / 10;
 
-        UID = (index + 11) / 10;
-
-
-        LocalIndex = index;
         Name = table.Name;
         Kind = table.Species;
         Rank = table.Rank;
-        //intRank = table.intRank;
         Level = table.Level;
         Cost = table.Cost;
 
@@ -44,6 +51,8 @@ public abstract class TowerBase
         FirstSkillIndex = table.FirstSkillIndex;
         SecondSkillIndex = table.SecondSkillIndex;
         ThirdSkillIndex = table.ThirdSkillIndex;
+
+        SetAility();
     }
 
     public abstract void SetAility();
@@ -52,6 +61,5 @@ public abstract class TowerBase
 
     public abstract void Destroy();
 
-    //public abstract void AddBuf();
 
 }

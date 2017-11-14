@@ -6,17 +6,21 @@ public class SpawnManager : Singleton<SpawnManager>
     private List<GameObject> _towerList = new List<GameObject>();
     private List<GameObject> _enemyList = new List<GameObject>();
 
-    public Tower CreateTower<T>(GameObject towerPrefab, Vector3 pos, int index, Transform parent) where T : TowerBase, new()
+    public T CreateTower<T>(GameObject towerPrefab, Vector3 pos, int index, Transform parent) where T : TowerBase
     {
         towerPrefab = SimpleObjectPool.SpawnPoolObject(towerPrefab, pos, Quaternion.identity, parent);
 
-        Tower tower = towerPrefab.GetComponent<Tower>();
-
-        tower.TowerBase = new T();
-        tower.TowerBase.Init(index);
-        tower.Init();
-
+        T tower = towerPrefab.AddComponent<T>();
+        tower.LocalIndex = index;
         _towerList.Add(towerPrefab);
+
+        //Tower tower = towerPrefab.GetComponent<Tower>();
+
+        //tower.TowerBase = new T();
+        //tower.TowerBase.Init(index);
+        //tower.Init();
+
+        //_towerList.Add(towerPrefab);
         return tower;
     }
 
@@ -42,7 +46,7 @@ public class SpawnManager : Singleton<SpawnManager>
         enemyPrefab = SimpleObjectPool.SpawnPoolObject(enemyPrefab, pos, Quaternion.identity, parent);
 
         T enemy =  enemyPrefab.AddComponent<T>();
-        enemy.Init(index);
+        enemy.Index = index;
 
         _enemyList.Add(enemyPrefab);
         return enemy;

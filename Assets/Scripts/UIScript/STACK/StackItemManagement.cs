@@ -54,7 +54,7 @@ public class StackItemManagement : UIPopupBase
         if (GetUID <= 0)
             return;
 
-        if (UserInformation.i.Inventory.FindItem(GetUID).Level == 10)
+        if (UserInformation.i.Inventory.GetItem(GetUID).Level == 10)
         {
             _upgradeBtn.interactable = false;
         }
@@ -74,18 +74,14 @@ public class StackItemManagement : UIPopupBase
     }
     public bool Buy()
     {
-        var newItem = UnitManager.i.ItemBuy(GetIndex);
+        int invenMoney = UserInformation.i.Inventory.Money;
+        var isBuy = UnitManager.i.ItemBuy(GetIndex, invenMoney);
 
-        if (newItem.Cost > UserInformation.i.Inventory.Money)
+        if (isBuy == false)
         {
             UIManager.i.CreatePopup<PopupWarning>(POPUP_TYPE.POPUP);
             return false;
         }
-
-        newItem.UID = Utility.i.GetNextUID();
-        UserInformation.i.Inventory.AddItem(newItem);
-
-        UserInformation.i.Inventory.Money -= newItem.Cost;
 
         UIManager.i.RemoveStackUIObject<StackItemManagement>();
         UIManager.i.GetPageUIObject<PageMain>().ResetUIUpdata();
@@ -98,15 +94,10 @@ public class StackItemManagement : UIPopupBase
     }
     public void Sell()
     {
+        UnitManager.i.ItemSell(GetUID);  
 
-        float cost = UserInformation.i.Inventory.FindItem(GetUID).Cost;
-        cost *= 0.5f;
-
-        UserInformation.i.Inventory.Money += (int)cost;
-        UserInformation.i.Inventory.RemoveItem(GetUID);
-
-        UnitManager.i.ItemSell();
-   
+        UIManager.i.RemoveTopStackUIObject();
+        UIManager.i.GetPageUIObject<PageMain>().ResetUIUpdata();
     }
 
     private void UpgradeButton()
@@ -117,13 +108,19 @@ public class StackItemManagement : UIPopupBase
 
     private void MountingButton()
     {
-        UnitManager.i.ItemMounting(GetUID);
+
+        var uid = UserInformation.i.Inventory.GetCheckMountItemUID(GetUID);
+
+        UnitManager.i.RealeaseItem(uid);
+
+        UnitManager.i.MountItem(GetUID);
+
         UIManager.i.RemoveTopStackUIObject();
     }
 
     private void RealeaseButton()
     {
-        UnitManager.i.ItemRealease(GetUID);
+        UnitManager.i.RealeaseItem(GetUID);
         UIManager.i.RemoveTopStackUIObject();
     }
 

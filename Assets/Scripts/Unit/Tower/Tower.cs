@@ -21,7 +21,6 @@ public class Tower : MonoBehaviour
     }
 
     private List<EnemyBase> _targetList = new List<EnemyBase>();
-    private bool _isMovable = false;
     private float _attackDelay = 0;    
     private GameObject _target;
     private Transform _transform;
@@ -37,9 +36,6 @@ public class Tower : MonoBehaviour
     public void Init()
     {
         TowerBase.SetAility();
-        _isMovable = true;
-        if (_isMovable == true)
-            _currentState = States.IDLE;
 
         _transform = GetComponent<Transform>();
     }
@@ -51,8 +47,6 @@ public class Tower : MonoBehaviour
     {
         switch (_currentState)
         {   
-
-
             case States.IDLE:
                 {
                     Debug.Log("Check");
@@ -76,12 +70,6 @@ public class Tower : MonoBehaviour
                 }
                 break;                      
         }
-    }
-
-    private void OnceFunc(States state)
-    {
-        _currentState = state;
-        Debug.Log("animator");
     }
 
     // 적 감지하는 함수
